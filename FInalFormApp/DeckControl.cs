@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FinalFormApp
 {
-    public partial class CardBack : UserControl
+    public partial class DeckControl : UserControl
     {
-        public CardBack()
+        public DeckControl()
         {
             InitializeComponent();
         }

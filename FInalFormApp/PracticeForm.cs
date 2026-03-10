@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FinalFormApp
 {
-    public partial class Deck : UserControl
+    public partial class PracticeForm : Form
     {
-        public Deck()
+        public PracticeForm()
         {
             InitializeComponent();
         }

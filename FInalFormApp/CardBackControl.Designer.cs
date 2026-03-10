@@ -1,6 +1,6 @@
 ﻿namespace FinalFormApp
 {
-    partial class CardBack
+    partial class CardBackControl
     {
         /// <summary> 
         /// Required designer variable.
