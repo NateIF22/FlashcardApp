@@ -28,44 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            button1 = new Button();
+            btnNewCard = new Button();
+            btnEditCard = new Button();
+            flpDecks = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // label1
+            // btnNewCard
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            btnNewCard.Location = new Point(636, 12);
+            btnNewCard.Name = "btnNewCard";
+            btnNewCard.Size = new Size(94, 29);
+            btnNewCard.TabIndex = 1;
+            btnNewCard.Text = "New Card";
+            btnNewCard.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEditCard
             // 
-            button1.Location = new Point(68, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnEditCard.Location = new Point(12, 12);
+            btnEditCard.Name = "btnEditCard";
+            btnEditCard.Size = new Size(94, 29);
+            btnEditCard.TabIndex = 2;
+            btnEditCard.Text = "Edit Card";
+            btnEditCard.UseVisualStyleBackColor = true;
+            // 
+            // flpDecks
+            // 
+            flpDecks.Location = new Point(12, 56);
+            flpDecks.Name = "flpDecks";
+            flpDecks.Size = new Size(718, 382);
+            flpDecks.TabIndex = 3;
+            flpDecks.Tag = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(742, 450);
-            Controls.Add(button1);
-            Controls.Add(label1);
+            Controls.Add(flpDecks);
+            Controls.Add(btnEditCard);
+            Controls.Add(btnNewCard);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button btnNewCard;
+        private Button btnEditCard;
+        private FlowLayoutPanel flpDecks;
     }
 }
