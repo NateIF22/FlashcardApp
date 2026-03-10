@@ -28,17 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lblName = new Label();
+            lblCategoryLabel = new Label();
+            lblCardNumberLabel = new Label();
+            btnPractice = new Button();
+            lblCategory = new Label();
+            lblCardNumber = new Label();
             SuspendLayout();
             // 
-            // Deck
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(4, 12);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(98, 31);
+            lblName.TabIndex = 0;
+            lblName.Text = "Spanish";
+            // 
+            // lblCategoryLabel
+            // 
+            lblCategoryLabel.AutoSize = true;
+            lblCategoryLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblCategoryLabel.Location = new Point(4, 55);
+            lblCategoryLabel.Name = "lblCategoryLabel";
+            lblCategoryLabel.Size = new Size(88, 25);
+            lblCategoryLabel.TabIndex = 1;
+            lblCategoryLabel.Text = "Category:";
+            // 
+            // lblCardNumberLabel
+            // 
+            lblCardNumberLabel.AutoSize = true;
+            lblCardNumberLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCardNumberLabel.Location = new Point(31, 80);
+            lblCardNumberLabel.Name = "lblCardNumberLabel";
+            lblCardNumberLabel.Size = new Size(61, 25);
+            lblCardNumberLabel.TabIndex = 2;
+            lblCardNumberLabel.Text = "Cards:";
+            // 
+            // btnPractice
+            // 
+            btnPractice.Location = new Point(146, 12);
+            btnPractice.Name = "btnPractice";
+            btnPractice.Size = new Size(94, 29);
+            btnPractice.TabIndex = 3;
+            btnPractice.Text = "Practice";
+            btnPractice.UseVisualStyleBackColor = true;
+            // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(98, 60);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(74, 20);
+            lblCategory.TabIndex = 4;
+            lblCategory.Text = "Language";
+            // 
+            // lblCardNumber
+            // 
+            lblCardNumber.AutoSize = true;
+            lblCardNumber.Location = new Point(98, 84);
+            lblCardNumber.Name = "lblCardNumber";
+            lblCardNumber.Size = new Size(17, 20);
+            lblCardNumber.TabIndex = 5;
+            lblCardNumber.Text = "0";
+            // 
+            // DeckControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "Deck";
-            Size = new Size(328, 249);
+            Controls.Add(lblCardNumber);
+            Controls.Add(lblCategory);
+            Controls.Add(btnPractice);
+            Controls.Add(lblCardNumberLabel);
+            Controls.Add(lblCategoryLabel);
+            Controls.Add(lblName);
+            Name = "DeckControl";
+            Size = new Size(252, 123);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblName;
+        private Label lblCategoryLabel;
+        private Label lblCardNumberLabel;
+        private Button btnPractice;
+        private Label lblCategory;
+        private Label lblCardNumber;
     }
 }

@@ -30,7 +30,7 @@
         {
             btnNewDeck = new Button();
             btnEditDeck = new Button();
-            flpDecks = new FlowLayoutPanel();
+            fbDecks = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // btnNewDeck
@@ -52,20 +52,20 @@
             btnEditDeck.Text = "Edit Deck";
             btnEditDeck.UseVisualStyleBackColor = true;
             // 
-            // flpDecks
+            // fbDecks
             // 
-            flpDecks.Location = new Point(12, 56);
-            flpDecks.Name = "flpDecks";
-            flpDecks.Size = new Size(718, 382);
-            flpDecks.TabIndex = 3;
-            flpDecks.Tag = "";
+            fbDecks.Location = new Point(12, 56);
+            fbDecks.Name = "fbDecks";
+            fbDecks.Size = new Size(718, 382);
+            fbDecks.TabIndex = 3;
+            fbDecks.Tag = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(742, 450);
-            Controls.Add(flpDecks);
+            Controls.Add(fbDecks);
             Controls.Add(btnEditDeck);
             Controls.Add(btnNewDeck);
             Name = "Form1";
@@ -78,6 +78,6 @@
         private Label label1;
         private Button btnNewDeck;
         private Button btnEditDeck;
-        private FlowLayoutPanel flpDecks;
+        private FlowLayoutPanel fbDecks;
     }
 }

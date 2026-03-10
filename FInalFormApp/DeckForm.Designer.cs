@@ -31,9 +31,9 @@
             lblSave = new Button();
             lblCancel = new Button();
             lblDeckName = new Label();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            lblType = new Label();
+            tbDeckName = new TextBox();
+            tbDeckCategory = new TextBox();
+            lblDeckCategory = new Label();
             SuspendLayout();
             // 
             // lblSave
@@ -54,6 +54,7 @@
             lblCancel.TabIndex = 1;
             lblCancel.Text = "Cancel";
             lblCancel.UseVisualStyleBackColor = true;
+            lblCancel.Click += lblCancel_Click;
             // 
             // lblDeckName
             // 
@@ -64,42 +65,43 @@
             lblDeckName.TabIndex = 2;
             lblDeckName.Text = "Name";
             // 
-            // textBox1
+            // tbDeckName
             // 
-            textBox1.Location = new Point(78, 17);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(239, 27);
-            textBox1.TabIndex = 3;
+            tbDeckName.Location = new Point(78, 17);
+            tbDeckName.Name = "tbDeckName";
+            tbDeckName.Size = new Size(239, 27);
+            tbDeckName.TabIndex = 3;
             // 
-            // textBox3
+            // tbDeckCategory
             // 
-            textBox3.Location = new Point(78, 50);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(239, 27);
-            textBox3.TabIndex = 7;
+            tbDeckCategory.Location = new Point(78, 50);
+            tbDeckCategory.Name = "tbDeckCategory";
+            tbDeckCategory.Size = new Size(239, 27);
+            tbDeckCategory.TabIndex = 7;
             // 
-            // lblType
+            // lblDeckCategory
             // 
-            lblType.AutoSize = true;
-            lblType.Location = new Point(22, 53);
-            lblType.Name = "lblType";
-            lblType.Size = new Size(40, 20);
-            lblType.TabIndex = 6;
-            lblType.Text = "Type";
+            lblDeckCategory.AutoSize = true;
+            lblDeckCategory.Location = new Point(22, 53);
+            lblDeckCategory.Name = "lblDeckCategory";
+            lblDeckCategory.Size = new Size(40, 20);
+            lblDeckCategory.TabIndex = 6;
+            lblDeckCategory.Text = "Type";
             // 
             // DeckForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(339, 142);
-            Controls.Add(textBox3);
-            Controls.Add(lblType);
-            Controls.Add(textBox1);
+            Controls.Add(tbDeckCategory);
+            Controls.Add(lblDeckCategory);
+            Controls.Add(tbDeckName);
             Controls.Add(lblDeckName);
             Controls.Add(lblCancel);
             Controls.Add(lblSave);
             Name = "DeckForm";
             Text = "DeckForm";
+            Load += DeckForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,8 +111,8 @@
         private Button lblSave;
         private Button lblCancel;
         private Label lblDeckName;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private Label lblType;
+        private TextBox tbDeckName;
+        private TextBox tbDeckCategory;
+        private Label lblDeckCategory;
     }
 }
