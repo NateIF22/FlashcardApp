@@ -41,6 +41,7 @@
             btnNewDeck.TabIndex = 1;
             btnNewDeck.Text = "New Deck";
             btnNewDeck.UseVisualStyleBackColor = true;
+            btnNewDeck.Click += btnNewDeck_Click;
             // 
             // btnEditDeck
             // 

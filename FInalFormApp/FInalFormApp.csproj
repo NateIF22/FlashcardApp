@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="CardBack.cs">
+    <Compile Update="CardBackControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

@@ -14,5 +14,10 @@ namespace FinalFormApp
         {
             InitializeComponent();
         }
+
+        private void lblSave_Click(object sender, EventArgs e)
+        {
+            // Logic to save the new deck
+        }
     }
 }
