@@ -68,12 +68,14 @@
             // 
             // btnPractice
             // 
-            btnPractice.Location = new Point(146, 12);
+            btnPractice.BackColor = Color.Transparent;
+            btnPractice.Location = new Point(8, 108);
             btnPractice.Name = "btnPractice";
             btnPractice.Size = new Size(94, 29);
             btnPractice.TabIndex = 3;
             btnPractice.Text = "Practice";
-            btnPractice.UseVisualStyleBackColor = true;
+            btnPractice.UseVisualStyleBackColor = false;
+            btnPractice.Click += btnPractice_Click;
             // 
             // lblCategory
             // 
@@ -97,6 +99,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Silver;
             Controls.Add(lblCardNumber);
             Controls.Add(lblCategory);
             Controls.Add(btnPractice);
@@ -104,7 +107,7 @@
             Controls.Add(lblCategoryLabel);
             Controls.Add(lblName);
             Name = "DeckControl";
-            Size = new Size(252, 123);
+            Size = new Size(176, 162);
             ResumeLayout(false);
             PerformLayout();
         }

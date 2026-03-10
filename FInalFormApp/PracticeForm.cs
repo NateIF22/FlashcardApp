@@ -10,9 +10,12 @@ namespace FinalFormApp
 {
     public partial class PracticeForm : Form
     {
-        public PracticeForm()
+        public PracticeForm(Deck DeckToPractice)
         {
             InitializeComponent();
+            if (DeckToPractice.Cards.Count > 0)
+            {
+            }
         }
     }
 }
