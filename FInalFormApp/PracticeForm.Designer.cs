@@ -39,14 +39,15 @@
             btnExit.TabIndex = 1;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // Practice
+            // PracticeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnExit);
-            Name = "Practice";
+            Name = "PracticeForm";
             Text = "Practice";
             ResumeLayout(false);
         }

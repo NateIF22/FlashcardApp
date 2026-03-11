@@ -27,10 +27,10 @@ namespace FinalFormApp
         {
             // opens the practice form for the deck
             PracticeForm practiceForm = new PracticeForm(DeckDetails);
-            if (practiceForm.ShowDialog() == DialogResult.OK)
-            {
-                
-            }
+            practiceForm.Show();
+            btnPractice.Enabled = false;
+            btnPractice.Text = "Practicing...";
+
         }
     }
 }

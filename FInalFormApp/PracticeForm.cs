@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FInalFormApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace FinalFormApp
         public PracticeForm(Deck DeckToPractice)
         {
             InitializeComponent();
-            if (DeckToPractice.Cards.Count > 0)
-            {
-            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // TODO: Figure out how to re enable the practice button on the deck control when the practice form is closed
+            this.Close();
         }
     }
 }
