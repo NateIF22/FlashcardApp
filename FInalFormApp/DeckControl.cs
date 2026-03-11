@@ -21,6 +21,7 @@ namespace FinalFormApp
             // Syncs the labels with the deck details
             lblName.DataBindings.Add("Text", DeckDetails, "Name");
             lblCategory.DataBindings.Add("Text", DeckDetails, "Category");
+            lblCardNumber.DataBindings.Add("Text", DeckDetails, "CardCount");
         }
 
         private void btnPractice_Click(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace FinalFormApp
             practiceForm.Show();
             btnPractice.Enabled = false;
             btnPractice.Text = "Practicing...";
+        }
+
+        private void DeckControl_MouseHover(object sender, EventArgs e)
+        {
+            // Changes the background color of the control when hovered over
 
         }
     }

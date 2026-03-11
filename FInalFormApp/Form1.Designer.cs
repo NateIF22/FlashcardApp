@@ -51,6 +51,7 @@
             btnEditDeck.TabIndex = 2;
             btnEditDeck.Text = "Edit Deck";
             btnEditDeck.UseVisualStyleBackColor = true;
+            btnEditDeck.Click += btnEditDeck_Click;
             // 
             // fpDecks
             // 

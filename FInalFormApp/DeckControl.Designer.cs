@@ -108,6 +108,7 @@
             Controls.Add(lblName);
             Name = "DeckControl";
             Size = new Size(176, 162);
+            MouseHover += DeckControl_MouseHover;
             ResumeLayout(false);
             PerformLayout();
         }

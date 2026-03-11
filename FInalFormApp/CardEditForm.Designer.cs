@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             gbCardFront = new GroupBox();
+            tbQuestionNote = new TextBox();
+            lblQuestionNote = new Label();
+            tbQuestion = new TextBox();
+            lblQuestion = new Label();
+            tbName = new TextBox();
+            lblName = new Label();
             btnSave = new Button();
             btnCancel = new Button();
-            textBox3 = new TextBox();
-            lblQuestionContext = new Label();
-            textBox2 = new TextBox();
-            lblQuestion = new Label();
-            textBox1 = new TextBox();
-            lblName = new Label();
             gbCardBack = new GroupBox();
-            textBox5 = new TextBox();
-            lblAnswerContext = new Label();
-            textBox6 = new TextBox();
+            tbAnswerNote = new TextBox();
+            lblAnswerNote = new Label();
+            tbAnswer = new TextBox();
             lblAnswer = new Label();
             gbCardFront.SuspendLayout();
             gbCardBack.SuspendLayout();
@@ -48,11 +48,11 @@
             // 
             // gbCardFront
             // 
-            gbCardFront.Controls.Add(textBox3);
-            gbCardFront.Controls.Add(lblQuestionContext);
-            gbCardFront.Controls.Add(textBox2);
+            gbCardFront.Controls.Add(tbQuestionNote);
+            gbCardFront.Controls.Add(lblQuestionNote);
+            gbCardFront.Controls.Add(tbQuestion);
             gbCardFront.Controls.Add(lblQuestion);
-            gbCardFront.Controls.Add(textBox1);
+            gbCardFront.Controls.Add(tbName);
             gbCardFront.Controls.Add(lblName);
             gbCardFront.Location = new Point(12, 12);
             gbCardFront.Name = "gbCardFront";
@@ -61,46 +61,28 @@
             gbCardFront.TabStop = false;
             gbCardFront.Text = "Card Front";
             // 
-            // btnSave
+            // tbQuestionNote
             // 
-            btnSave.Location = new Point(199, 257);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(94, 29);
-            btnSave.TabIndex = 9;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            tbQuestionNote.Location = new Point(106, 86);
+            tbQuestionNote.Name = "tbQuestionNote";
+            tbQuestionNote.Size = new Size(175, 27);
+            tbQuestionNote.TabIndex = 5;
             // 
-            // btnCancel
+            // lblQuestionNote
             // 
-            btnCancel.Location = new Point(27, 257);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
-            btnCancel.TabIndex = 8;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            lblQuestionNote.AutoSize = true;
+            lblQuestionNote.Location = new Point(33, 89);
+            lblQuestionNote.Name = "lblQuestionNote";
+            lblQuestionNote.Size = new Size(42, 20);
+            lblQuestionNote.TabIndex = 4;
+            lblQuestionNote.Text = "Note";
             // 
-            // textBox3
+            // tbQuestion
             // 
-            textBox3.Location = new Point(106, 86);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(175, 27);
-            textBox3.TabIndex = 5;
-            // 
-            // lblQuestionContext
-            // 
-            lblQuestionContext.AutoSize = true;
-            lblQuestionContext.Location = new Point(15, 89);
-            lblQuestionContext.Name = "lblQuestionContext";
-            lblQuestionContext.Size = new Size(60, 20);
-            lblQuestionContext.TabIndex = 4;
-            lblQuestionContext.Text = "Context";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(106, 53);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 27);
-            textBox2.TabIndex = 3;
+            tbQuestion.Location = new Point(106, 53);
+            tbQuestion.Name = "tbQuestion";
+            tbQuestion.Size = new Size(175, 27);
+            tbQuestion.TabIndex = 3;
             // 
             // lblQuestion
             // 
@@ -111,12 +93,12 @@
             lblQuestion.TabIndex = 2;
             lblQuestion.Text = "Question";
             // 
-            // textBox1
+            // tbName
             // 
-            textBox1.Location = new Point(106, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 27);
-            textBox1.TabIndex = 1;
+            tbName.Location = new Point(106, 20);
+            tbName.Name = "tbName";
+            tbName.Size = new Size(175, 27);
+            tbName.TabIndex = 1;
             // 
             // lblName
             // 
@@ -127,11 +109,30 @@
             lblName.TabIndex = 0;
             lblName.Text = "Name";
             // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(199, 257);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(94, 29);
+            btnSave.TabIndex = 9;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(27, 257);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(94, 29);
+            btnCancel.TabIndex = 8;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            // 
             // gbCardBack
             // 
-            gbCardBack.Controls.Add(textBox5);
-            gbCardBack.Controls.Add(lblAnswerContext);
-            gbCardBack.Controls.Add(textBox6);
+            gbCardBack.Controls.Add(tbAnswerNote);
+            gbCardBack.Controls.Add(lblAnswerNote);
+            gbCardBack.Controls.Add(tbAnswer);
             gbCardBack.Controls.Add(lblAnswer);
             gbCardBack.Location = new Point(12, 147);
             gbCardBack.Name = "gbCardBack";
@@ -140,28 +141,28 @@
             gbCardBack.TabStop = false;
             gbCardBack.Text = "Card Back";
             // 
-            // textBox5
+            // tbAnswerNote
             // 
-            textBox5.Location = new Point(106, 59);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(175, 27);
-            textBox5.TabIndex = 5;
+            tbAnswerNote.Location = new Point(106, 59);
+            tbAnswerNote.Name = "tbAnswerNote";
+            tbAnswerNote.Size = new Size(175, 27);
+            tbAnswerNote.TabIndex = 5;
             // 
-            // lblAnswerContext
+            // lblAnswerNote
             // 
-            lblAnswerContext.AutoSize = true;
-            lblAnswerContext.Location = new Point(15, 62);
-            lblAnswerContext.Name = "lblAnswerContext";
-            lblAnswerContext.Size = new Size(60, 20);
-            lblAnswerContext.TabIndex = 4;
-            lblAnswerContext.Text = "Context";
+            lblAnswerNote.AutoSize = true;
+            lblAnswerNote.Location = new Point(33, 62);
+            lblAnswerNote.Name = "lblAnswerNote";
+            lblAnswerNote.Size = new Size(42, 20);
+            lblAnswerNote.TabIndex = 4;
+            lblAnswerNote.Text = "Note";
             // 
-            // textBox6
+            // tbAnswer
             // 
-            textBox6.Location = new Point(106, 26);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(175, 27);
-            textBox6.TabIndex = 3;
+            tbAnswer.Location = new Point(106, 26);
+            tbAnswer.Name = "tbAnswer";
+            tbAnswer.Size = new Size(175, 27);
+            tbAnswer.TabIndex = 3;
             // 
             // lblAnswer
             // 
@@ -183,6 +184,7 @@
             Controls.Add(btnCancel);
             Name = "CardEditForm";
             Text = "CardEditForm";
+            Load += CardEditForm_Load;
             gbCardFront.ResumeLayout(false);
             gbCardFront.PerformLayout();
             gbCardBack.ResumeLayout(false);
@@ -196,15 +198,15 @@
         private Label lblName;
         private Button btnSave;
         private Button btnCancel;
-        private TextBox textBox3;
-        private Label lblQuestionContext;
-        private TextBox textBox2;
+        private TextBox tbQuestionNote;
+        private Label lblQuestionNote;
+        private TextBox tbQuestion;
         private Label lblQuestion;
-        private TextBox textBox1;
+        private TextBox tbName;
         private GroupBox gbCardBack;
-        private TextBox textBox5;
-        private Label lblAnswerContext;
-        private TextBox textBox6;
+        private TextBox tbAnswerNote;
+        private Label lblAnswerNote;
+        private TextBox tbAnswer;
         private Label lblAnswer;
     }
 }

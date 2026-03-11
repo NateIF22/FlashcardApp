@@ -27,6 +27,7 @@ namespace FinalFormApp
         {
             MessageBox.Show($"Deck: {deck.Name} created successfully!");
             this.DialogResult = DialogResult.OK;
+            // Needs to show the card edit form
             this.Close();
         }
 

@@ -4,7 +4,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace FInalFormApp
 {
-    
+
     public partial class Form1 : Form
     {
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -38,12 +38,6 @@ namespace FInalFormApp
                     AddDeckControl(deck);
                 }
             }
-            {
-                
-            }
-            {
-
-            }
         }
 
         private void AddDeckControl(Deck deck)
@@ -53,32 +47,6 @@ namespace FInalFormApp
         }
 
         public void UpdateDecks()
-        {
-            fpDecks.Controls.Clear();
-            foreach (Deck deck in Decks)
-            {
-                fpDecks.Controls.Add(new DeckControl(deck));
-            }
-        }
-
-        public void AddDeck(
-            string category,
-            string name
-            )
-        {
-            Decks.Add(new Deck
-            {
-                Category = category,
-                Name = name
-            });
-        }
-
-        public void AddDeck(Deck deck)
-        {
-            Decks.Add(deck);
-        }
-
-        private void UpdateDeckList()
         {
             fpDecks.Controls.Clear();
             foreach (Deck deck in Decks)
@@ -99,6 +67,22 @@ namespace FInalFormApp
 
 
             }
+        }
+
+        private void btnEditDeck_Click(object sender, EventArgs e)
+        {
+            // When edit is clicked, open the card edit form
+            // Checks of the selected 
+            if (deckBindingSource.Current is Deck selectedDeck)
+            {
+                CardEditForm form = new CardEditForm(selectedDeck);
+                if (form.ShowDialog() == DialogResult.OK) 
+                {
+                    //If the cards change, refresh the ui
+                    UpdateDecks();
+                }
+            }
+
         }
     }
 }
