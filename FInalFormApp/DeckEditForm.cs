@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace FinalFormApp
 {
-    public partial class DeckView : Form
+    public partial class DeckEditForm : Form
     {
-        public DeckView()
+        public Deck DeckDetails { get; set; }
+        public DeckEditForm(Deck deckDetails)
         {
             InitializeComponent();
+            DeckDetails = deckDetails;
         }
 
         private void btnNewCard_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace FinalFormApp
 {
-    partial class DeckView
+    partial class DeckEditForm
     {
         /// <summary>
         /// Required designer variable.
