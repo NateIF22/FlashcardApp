@@ -14,5 +14,11 @@ namespace FinalFormApp
         {
             InitializeComponent();
         }
+
+        public void PopulateCardDetails(Card card)
+        {
+            lblQuestion.Text = card.Question;
+            tbContext.Text = card.QuestionNote;
+        }
     }
 }

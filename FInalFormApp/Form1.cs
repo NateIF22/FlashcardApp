@@ -69,20 +69,20 @@ namespace FInalFormApp
             }
         }
 
-        private void btnEditDeck_Click(object sender, EventArgs e)
-        {
-            // When edit is clicked, open the card edit form
-            // Checks of the selected 
-            if (deckBindingSource.Current is Deck selectedDeck)
-            {
-                CardEditForm form = new CardEditForm(selectedDeck);
-                if (form.ShowDialog() == DialogResult.OK) 
-                {
-                    //If the cards change, refresh the ui
-                    UpdateDecks();
-                }
-            }
+        //private void btnEditDeck_Click(object sender, EventArgs e)
+        //{
+        //    // When edit is clicked, open the card edit form
+        //    // Checks of the selected 
+        //    if (deckBindingSource.Current is Deck selectedDeck)
+        //    {
+        //        CardEditForm form = new CardEditForm(selectedDeck);
+        //        if (form.ShowDialog() == DialogResult.OK) 
+        //        {
+        //            //If the cards change, refresh the ui
+        //            UpdateDecks();
+        //        }
+        //    }
 
-        }
+        //}
     }
 }

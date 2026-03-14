@@ -59,7 +59,7 @@
             // lblDeckName
             // 
             lblDeckName.AutoSize = true;
-            lblDeckName.Location = new Point(22, 20);
+            lblDeckName.Location = new Point(35, 20);
             lblDeckName.Name = "lblDeckName";
             lblDeckName.Size = new Size(49, 20);
             lblDeckName.TabIndex = 2;
@@ -67,26 +67,28 @@
             // 
             // tbDeckName
             // 
-            tbDeckName.Location = new Point(78, 17);
+            tbDeckName.Location = new Point(90, 17);
             tbDeckName.Name = "tbDeckName";
-            tbDeckName.Size = new Size(239, 27);
+            tbDeckName.PlaceholderText = "German";
+            tbDeckName.Size = new Size(227, 27);
             tbDeckName.TabIndex = 3;
             // 
             // tbDeckCategory
             // 
-            tbDeckCategory.Location = new Point(78, 50);
+            tbDeckCategory.Location = new Point(90, 50);
             tbDeckCategory.Name = "tbDeckCategory";
-            tbDeckCategory.Size = new Size(239, 27);
+            tbDeckCategory.PlaceholderText = "Language";
+            tbDeckCategory.Size = new Size(227, 27);
             tbDeckCategory.TabIndex = 7;
             // 
             // lblDeckCategory
             // 
             lblDeckCategory.AutoSize = true;
-            lblDeckCategory.Location = new Point(22, 53);
+            lblDeckCategory.Location = new Point(15, 53);
             lblDeckCategory.Name = "lblDeckCategory";
-            lblDeckCategory.Size = new Size(40, 20);
+            lblDeckCategory.Size = new Size(69, 20);
             lblDeckCategory.TabIndex = 6;
-            lblDeckCategory.Text = "Type";
+            lblDeckCategory.Text = "Category";
             // 
             // DeckForm
             // 

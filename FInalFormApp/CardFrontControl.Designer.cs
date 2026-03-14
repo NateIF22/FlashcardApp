@@ -28,39 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblTitle = new Label();
-            btnFlip = new Button();
             tbContext = new TextBox();
             lblQuestion = new Label();
+            lblFront = new Label();
             SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(148, 30);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(75, 38);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Title";
-            // 
-            // btnFlip
-            // 
-            btnFlip.Location = new Point(133, 397);
-            btnFlip.Name = "btnFlip";
-            btnFlip.Size = new Size(110, 29);
-            btnFlip.TabIndex = 1;
-            btnFlip.Text = "Flip";
-            btnFlip.UseVisualStyleBackColor = true;
             // 
             // tbContext
             // 
             tbContext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbContext.Location = new Point(53, 171);
+            tbContext.Location = new Point(27, 141);
             tbContext.Multiline = true;
             tbContext.Name = "tbContext";
             tbContext.ReadOnly = true;
-            tbContext.Size = new Size(270, 121);
+            tbContext.Size = new Size(317, 174);
             tbContext.TabIndex = 2;
             tbContext.Text = "Possible context for the word or question goes here.";
             // 
@@ -68,31 +48,39 @@
             // 
             lblQuestion.AutoSize = true;
             lblQuestion.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuestion.Location = new Point(103, 119);
+            lblQuestion.Location = new Point(99, 77);
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(170, 31);
             lblQuestion.TabIndex = 3;
             lblQuestion.Text = "Word/Question";
             // 
-            // Card
+            // lblFront
+            // 
+            lblFront.AutoSize = true;
+            lblFront.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFront.Location = new Point(148, 13);
+            lblFront.Name = "lblFront";
+            lblFront.Size = new Size(72, 31);
+            lblFront.TabIndex = 4;
+            lblFront.Text = "Front";
+            // 
+            // CardFrontControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
+            Controls.Add(lblFront);
             Controls.Add(lblQuestion);
             Controls.Add(tbContext);
-            Controls.Add(btnFlip);
-            Controls.Add(lblTitle);
-            Name = "Card";
+            Name = "CardFrontControl";
             Size = new Size(377, 465);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblTitle;
-        private Button btnFlip;
         private TextBox tbContext;
         private Label lblQuestion;
+        private Label lblFront;
     }
 }

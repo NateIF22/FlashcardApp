@@ -30,18 +30,17 @@
         {
             tbContext = new TextBox();
             lblAnswer = new Label();
-            btnCorrect = new Button();
-            btnIncorrect = new Button();
+            lblBack = new Label();
             SuspendLayout();
             // 
             // tbContext
             // 
             tbContext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbContext.Location = new Point(48, 159);
+            tbContext.Location = new Point(15, 155);
             tbContext.Multiline = true;
             tbContext.Name = "tbContext";
             tbContext.ReadOnly = true;
-            tbContext.Size = new Size(270, 121);
+            tbContext.Size = new Size(346, 187);
             tbContext.TabIndex = 2;
             tbContext.Text = "Possible context for the answer goes here.";
             // 
@@ -49,39 +48,31 @@
             // 
             lblAnswer.AutoSize = true;
             lblAnswer.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAnswer.Location = new Point(103, 88);
+            lblAnswer.Location = new Point(105, 86);
             lblAnswer.Name = "lblAnswer";
-            lblAnswer.Size = new Size(170, 31);
+            lblAnswer.Size = new Size(153, 31);
             lblAnswer.TabIndex = 3;
-            lblAnswer.Text = "Word/Question";
+            lblAnswer.Text = "Word/Answer";
             // 
-            // btnCorrect
+            // lblBack
             // 
-            btnCorrect.Location = new Point(224, 386);
-            btnCorrect.Name = "btnCorrect";
-            btnCorrect.Size = new Size(94, 29);
-            btnCorrect.TabIndex = 4;
-            btnCorrect.Text = "Correct";
-            btnCorrect.UseVisualStyleBackColor = true;
+            lblBack.AutoSize = true;
+            lblBack.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBack.Location = new Point(152, 21);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(65, 31);
+            lblBack.TabIndex = 4;
+            lblBack.Text = "Back";
             // 
-            // btnIncorrect
-            // 
-            btnIncorrect.Location = new Point(48, 386);
-            btnIncorrect.Name = "btnIncorrect";
-            btnIncorrect.Size = new Size(94, 29);
-            btnIncorrect.TabIndex = 5;
-            btnIncorrect.Text = "Incorrect";
-            btnIncorrect.UseVisualStyleBackColor = true;
-            // 
-            // CardBack
+            // CardBackControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnIncorrect);
-            Controls.Add(btnCorrect);
+            BackColor = SystemColors.ControlDark;
+            Controls.Add(lblBack);
             Controls.Add(lblAnswer);
             Controls.Add(tbContext);
-            Name = "CardBack";
+            Name = "CardBackControl";
             Size = new Size(377, 465);
             ResumeLayout(false);
             PerformLayout();
@@ -90,7 +81,6 @@
         #endregion
         private TextBox tbContext;
         private Label lblAnswer;
-        private Button btnCorrect;
-        private Button btnIncorrect;
+        private Label lblBack;
     }
 }
