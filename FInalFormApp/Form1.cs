@@ -59,7 +59,7 @@ namespace FInalFormApp
         {
             // Logic to add a new deck to the list box
             // Add the DeckForm for creating a new deck
-            DeckForm deckForm = new DeckForm();
+            DeckCreateForm deckForm = new DeckCreateForm(null);
             if (deckForm.ShowDialog() == DialogResult.OK)
             {
                 // ands a new deck to the list of decks

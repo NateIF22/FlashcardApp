@@ -1,6 +1,6 @@
 ﻿namespace FinalFormApp
 {
-    partial class DeckForm
+    partial class DeckCreateForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,8 @@
             lblCancel = new Button();
             lblDeckName = new Label();
             tbDeckName = new TextBox();
-            tbDeckCategory = new TextBox();
-            lblDeckCategory = new Label();
+            tbDeckType = new TextBox();
+            lblDeckType = new Label();
             SuspendLayout();
             // 
             // lblSave
@@ -59,11 +59,11 @@
             // lblDeckName
             // 
             lblDeckName.AutoSize = true;
-            lblDeckName.Location = new Point(35, 20);
+            lblDeckName.Location = new Point(28, 20);
             lblDeckName.Name = "lblDeckName";
-            lblDeckName.Size = new Size(49, 20);
+            lblDeckName.Size = new Size(56, 20);
             lblDeckName.TabIndex = 2;
-            lblDeckName.Text = "Name";
+            lblDeckName.Text = "Name: ";
             // 
             // tbDeckName
             // 
@@ -73,35 +73,35 @@
             tbDeckName.Size = new Size(227, 27);
             tbDeckName.TabIndex = 3;
             // 
-            // tbDeckCategory
+            // tbDeckType
             // 
-            tbDeckCategory.Location = new Point(90, 50);
-            tbDeckCategory.Name = "tbDeckCategory";
-            tbDeckCategory.PlaceholderText = "Language";
-            tbDeckCategory.Size = new Size(227, 27);
-            tbDeckCategory.TabIndex = 7;
+            tbDeckType.Location = new Point(90, 50);
+            tbDeckType.Name = "tbDeckType";
+            tbDeckType.PlaceholderText = "Language";
+            tbDeckType.Size = new Size(227, 27);
+            tbDeckType.TabIndex = 7;
             // 
-            // lblDeckCategory
+            // lblDeckType
             // 
-            lblDeckCategory.AutoSize = true;
-            lblDeckCategory.Location = new Point(15, 53);
-            lblDeckCategory.Name = "lblDeckCategory";
-            lblDeckCategory.Size = new Size(69, 20);
-            lblDeckCategory.TabIndex = 6;
-            lblDeckCategory.Text = "Category";
+            lblDeckType.AutoSize = true;
+            lblDeckType.Location = new Point(37, 53);
+            lblDeckType.Name = "lblDeckType";
+            lblDeckType.Size = new Size(47, 20);
+            lblDeckType.TabIndex = 6;
+            lblDeckType.Text = "Type: ";
             // 
-            // DeckForm
+            // DeckCreateForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(339, 142);
-            Controls.Add(tbDeckCategory);
-            Controls.Add(lblDeckCategory);
+            Controls.Add(tbDeckType);
+            Controls.Add(lblDeckType);
             Controls.Add(tbDeckName);
             Controls.Add(lblDeckName);
             Controls.Add(lblCancel);
             Controls.Add(lblSave);
-            Name = "DeckForm";
+            Name = "DeckCreateForm";
             Text = "DeckForm";
             Load += DeckForm_Load;
             ResumeLayout(false);
@@ -114,7 +114,7 @@
         private Button lblCancel;
         private Label lblDeckName;
         private TextBox tbDeckName;
-        private TextBox tbDeckCategory;
-        private Label lblDeckCategory;
+        private TextBox tbDeckType;
+        private Label lblDeckType;
     }
 }

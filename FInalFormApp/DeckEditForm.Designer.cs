@@ -35,6 +35,11 @@
             btnEditCard = new Button();
             btnRemoveDeck = new Button();
             lvCards = new ListView();
+            lblName = new Label();
+            lblCardCount = new Label();
+            lblType = new Label();
+            btnExit = new Button();
+            btnEditDeck = new Button();
             SuspendLayout();
             // 
             // lblNameLabel
@@ -66,7 +71,7 @@
             // 
             // btnNewCard
             // 
-            btnNewCard.Location = new Point(20, 136);
+            btnNewCard.Location = new Point(24, 148);
             btnNewCard.Name = "btnNewCard";
             btnNewCard.Size = new Size(94, 29);
             btnNewCard.TabIndex = 3;
@@ -76,7 +81,7 @@
             // 
             // btnEditCard
             // 
-            btnEditCard.Location = new Point(20, 171);
+            btnEditCard.Location = new Point(24, 183);
             btnEditCard.Name = "btnEditCard";
             btnEditCard.Size = new Size(94, 29);
             btnEditCard.TabIndex = 4;
@@ -86,9 +91,9 @@
             // 
             // btnRemoveDeck
             // 
-            btnRemoveDeck.Location = new Point(12, 409);
+            btnRemoveDeck.Location = new Point(20, 409);
             btnRemoveDeck.Name = "btnRemoveDeck";
-            btnRemoveDeck.Size = new Size(106, 29);
+            btnRemoveDeck.Size = new Size(98, 29);
             btnRemoveDeck.TabIndex = 5;
             btnRemoveDeck.Text = "Delete Deck";
             btnRemoveDeck.UseVisualStyleBackColor = true;
@@ -102,11 +107,63 @@
             lvCards.TabIndex = 6;
             lvCards.UseCompatibleStateImageBehavior = false;
             // 
-            // DeckView
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(75, 16);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(49, 20);
+            lblName.TabIndex = 7;
+            lblName.Text = "Name";
+            // 
+            // lblCardCount
+            // 
+            lblCardCount.AutoSize = true;
+            lblCardCount.Location = new Point(109, 55);
+            lblCardCount.Name = "lblCardCount";
+            lblCardCount.Size = new Size(17, 20);
+            lblCardCount.TabIndex = 8;
+            lblCardCount.Text = "0";
+            // 
+            // lblType
+            // 
+            lblType.AutoSize = true;
+            lblType.Location = new Point(66, 96);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(40, 20);
+            lblType.TabIndex = 9;
+            lblType.Text = "Type";
+            // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(24, 253);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(94, 29);
+            btnExit.TabIndex = 10;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
+            // btnEditDeck
+            // 
+            btnEditDeck.Location = new Point(24, 218);
+            btnEditDeck.Name = "btnEditDeck";
+            btnEditDeck.Size = new Size(94, 29);
+            btnEditDeck.TabIndex = 11;
+            btnEditDeck.Text = "Edit Deck";
+            btnEditDeck.UseVisualStyleBackColor = true;
+            btnEditDeck.Click += this.btnEditDeck_Click;
+            // 
+            // DeckEditForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEditDeck);
+            Controls.Add(btnExit);
+            Controls.Add(lblType);
+            Controls.Add(lblCardCount);
+            Controls.Add(lblName);
             Controls.Add(lvCards);
             Controls.Add(btnRemoveDeck);
             Controls.Add(btnEditCard);
@@ -114,7 +171,7 @@
             Controls.Add(lblTypeLabel);
             Controls.Add(lblCardCountLabel);
             Controls.Add(lblNameLabel);
-            Name = "DeckView";
+            Name = "DeckEditForm";
             Text = "DeckView";
             ResumeLayout(false);
             PerformLayout();
@@ -129,5 +186,10 @@
         private Button btnEditCard;
         private Button btnRemoveDeck;
         private ListView lvCards;
+        private Label lblName;
+        private Label lblCardCount;
+        private Label lblType;
+        private Button btnExit;
+        private Button btnEditDeck;
     }
 }

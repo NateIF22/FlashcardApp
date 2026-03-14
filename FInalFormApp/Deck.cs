@@ -10,6 +10,7 @@ namespace FinalFormApp
         public string Name { get; set; }
         public string Category { get; set; }
         public BindingList<Card> Cards { get; set; }
+        public int CardCount { set; get; }
 
         public Deck()
         {

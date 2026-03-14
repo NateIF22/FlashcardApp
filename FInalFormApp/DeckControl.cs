@@ -27,7 +27,7 @@ namespace FinalFormApp
 
         private void btnPractice_Click(object sender, EventArgs e)
         {
-            if (DeckDetails.Cards.Count == 0)
+            if (DeckDetails.CardCount == 0)
             {
                 MessageBox.Show("This deck has no cards to practice with. Please add some cards before practicing.", "No Cards");
                 return;
@@ -36,37 +36,10 @@ namespace FinalFormApp
             practiceForm.ShowDialog();
         }
 
-        private void DeckControl_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Color.Silver;
-        }
-
-        private void DeckControl_MouseEnter(object sender, EventArgs e)
-        {
-            this.BackColor = Color.LightBlue;
-
-        }
-
-        private void DeckControl_MouseLeave(object sender, EventArgs e)
-        {
-            this.BackColor = Color.Silver;
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             var deckEditForm = new DeckEditForm(DeckDetails);
-            // Adds a new card to the deck and updates the card count. Opens the card form for the new card and waits for it to close before reenabling the button(
-            Card newCard = new Card();
-            CardEditForm cardEditForm = new CardEditForm(newCard, DeckDetails);
-            cardEditForm.ShowDialog();
-
-            //if the card was saved, add it to the deck and update the card count
-            if (cardEditForm.DialogResult == DialogResult.OK)
-            {
-                DeckDetails.Cards.Add(newCard);
-                lblCardNumber.Text = DeckDetails.Cards.Count.ToString();
-            }
-
+            deckEditForm.ShowDialog();
         }
     }
 }

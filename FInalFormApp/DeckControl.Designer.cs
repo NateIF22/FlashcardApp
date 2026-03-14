@@ -30,10 +30,8 @@
         {
             lblName = new Label();
             lblCategoryLabel = new Label();
-            lblCardNumberLabel = new Label();
             btnPractice = new Button();
             lblCategory = new Label();
-            lblCardNumber = new Label();
             btnEdit = new Button();
             SuspendLayout();
             // 
@@ -51,26 +49,16 @@
             // 
             lblCategoryLabel.AutoSize = true;
             lblCategoryLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblCategoryLabel.Location = new Point(10, 56);
+            lblCategoryLabel.Location = new Point(19, 56);
             lblCategoryLabel.Name = "lblCategoryLabel";
             lblCategoryLabel.Size = new Size(88, 25);
             lblCategoryLabel.TabIndex = 1;
             lblCategoryLabel.Text = "Category:";
             // 
-            // lblCardNumberLabel
-            // 
-            lblCardNumberLabel.AutoSize = true;
-            lblCardNumberLabel.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCardNumberLabel.Location = new Point(37, 81);
-            lblCardNumberLabel.Name = "lblCardNumberLabel";
-            lblCardNumberLabel.Size = new Size(61, 25);
-            lblCardNumberLabel.TabIndex = 2;
-            lblCardNumberLabel.Text = "Cards:";
-            // 
             // btnPractice
             // 
             btnPractice.BackColor = Color.Transparent;
-            btnPractice.Location = new Point(4, 130);
+            btnPractice.Location = new Point(4, 93);
             btnPractice.Name = "btnPractice";
             btnPractice.Size = new Size(94, 29);
             btnPractice.TabIndex = 3;
@@ -81,24 +69,15 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(104, 61);
+            lblCategory.Location = new Point(113, 60);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(74, 20);
             lblCategory.TabIndex = 4;
             lblCategory.Text = "Language";
             // 
-            // lblCardNumber
-            // 
-            lblCardNumber.AutoSize = true;
-            lblCardNumber.Location = new Point(104, 85);
-            lblCardNumber.Name = "lblCardNumber";
-            lblCardNumber.Size = new Size(17, 20);
-            lblCardNumber.TabIndex = 5;
-            lblCardNumber.Text = "0";
-            // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(104, 130);
+            btnEdit.Location = new Point(104, 93);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(102, 29);
             btnEdit.TabIndex = 6;
@@ -112,16 +91,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
             Controls.Add(btnEdit);
-            Controls.Add(lblCardNumber);
             Controls.Add(lblCategory);
             Controls.Add(btnPractice);
-            Controls.Add(lblCardNumberLabel);
             Controls.Add(lblCategoryLabel);
             Controls.Add(lblName);
             Name = "DeckControl";
-            Size = new Size(209, 162);
-            MouseEnter += DeckControl_MouseEnter;
-            MouseLeave += DeckControl_MouseLeave;
+            Size = new Size(209, 126);
             ResumeLayout(false);
             PerformLayout();
         }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnNewDeck = new Button();
-            lvDecks = new ListView();
+            lvDecks = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // btnNewDeck
@@ -44,11 +44,11 @@
             // 
             // lvDecks
             // 
-            lvDecks.Location = new Point(12, 56);
+            lvDecks.AutoScroll = true;
+            lvDecks.Location = new Point(62, 56);
             lvDecks.Name = "lvDecks";
-            lvDecks.Size = new Size(758, 385);
+            lvDecks.Size = new Size(652, 385);
             lvDecks.TabIndex = 2;
-            lvDecks.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
@@ -66,6 +66,6 @@
 
         private Label label1;
         private Button btnNewDeck;
-        private ListView lvDecks;
+        private FlowLayoutPanel lvDecks;
     }
 }
