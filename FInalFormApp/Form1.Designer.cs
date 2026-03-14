@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnNewDeck = new Button();
-            fpDecks = new FlowLayoutPanel();
+            lvDecks = new ListView();
             SuspendLayout();
             // 
             // btnNewDeck
@@ -42,20 +42,20 @@
             btnNewDeck.UseVisualStyleBackColor = true;
             btnNewDeck.Click += btnNewDeck_Click;
             // 
-            // fpDecks
+            // lvDecks
             // 
-            fpDecks.Location = new Point(12, 56);
-            fpDecks.Name = "fpDecks";
-            fpDecks.Size = new Size(758, 385);
-            fpDecks.TabIndex = 3;
-            fpDecks.Tag = "";
+            lvDecks.Location = new Point(12, 56);
+            lvDecks.Name = "lvDecks";
+            lvDecks.Size = new Size(758, 385);
+            lvDecks.TabIndex = 2;
+            lvDecks.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 453);
-            Controls.Add(fpDecks);
+            Controls.Add(lvDecks);
             Controls.Add(btnNewDeck);
             Name = "Form1";
             Text = "Form1";
@@ -66,6 +66,6 @@
 
         private Label label1;
         private Button btnNewDeck;
-        private FlowLayoutPanel fpDecks;
+        private ListView lvDecks;
     }
 }

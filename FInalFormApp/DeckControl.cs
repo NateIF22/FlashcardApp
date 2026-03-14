@@ -52,8 +52,9 @@ namespace FinalFormApp
             this.BackColor = Color.Silver;
         }
 
-        private void btnNewCard_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
+            var editDeckForm = new (DeckDetails);
             // Adds a new card to the deck and updates the card count. Opens the card form for the new card and waits for it to close before reenabling the button(
             Card newCard = new Card();
             CardEditForm cardEditForm = new CardEditForm(newCard, DeckDetails);

@@ -32,7 +32,7 @@ namespace FInalFormApp
             }
             else if (e.ListChangedType == ListChangedType.ItemDeleted)
             {
-                fpDecks.Controls.Clear();
+                lvDecks.Controls.Clear();
                 foreach (Deck deck in Decks)
                 {
                     AddDeckControl(deck);
@@ -43,15 +43,15 @@ namespace FInalFormApp
         private void AddDeckControl(Deck deck)
         {
             var item = new DeckControl(deck);
-            fpDecks.Controls.Add(item);
+            lvDecks.Controls.Add(item);
         }
 
         public void UpdateDecks()
         {
-            fpDecks.Controls.Clear();
+            lvDecks.Controls.Clear();
             foreach (Deck deck in Decks)
             {
-                fpDecks.Controls.Add(new DeckControl(deck));
+                lvDecks.Controls.Add(new DeckControl(deck));
             }
         }
 

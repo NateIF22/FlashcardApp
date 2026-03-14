@@ -34,7 +34,7 @@
             btnPractice = new Button();
             lblCategory = new Label();
             lblCardNumber = new Label();
-            btnNewCard = new Button();
+            btnEdit = new Button();
             SuspendLayout();
             // 
             // lblName
@@ -96,22 +96,22 @@
             lblCardNumber.TabIndex = 5;
             lblCardNumber.Text = "0";
             // 
-            // btnNewCard
+            // btnEdit
             // 
-            btnNewCard.Location = new Point(104, 130);
-            btnNewCard.Name = "btnNewCard";
-            btnNewCard.Size = new Size(102, 29);
-            btnNewCard.TabIndex = 6;
-            btnNewCard.Text = "Add";
-            btnNewCard.UseVisualStyleBackColor = true;
-            btnNewCard.Click += btnNewCard_Click;
+            btnEdit.Location = new Point(104, 130);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(102, 29);
+            btnEdit.TabIndex = 6;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // DeckControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            Controls.Add(btnNewCard);
+            Controls.Add(btnEdit);
             Controls.Add(lblCardNumber);
             Controls.Add(lblCategory);
             Controls.Add(btnPractice);
@@ -134,6 +134,6 @@
         private Button btnPractice;
         private Label lblCategory;
         private Label lblCardNumber;
-        private Button btnNewCard;
+        private Button btnEdit;
     }
 }
