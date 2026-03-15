@@ -58,7 +58,7 @@
             // btnPractice
             // 
             btnPractice.BackColor = Color.Transparent;
-            btnPractice.Location = new Point(4, 93);
+            btnPractice.Location = new Point(3, 92);
             btnPractice.Name = "btnPractice";
             btnPractice.Size = new Size(94, 29);
             btnPractice.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(104, 93);
+            btnEdit.Location = new Point(102, 92);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(102, 29);
             btnEdit.TabIndex = 6;
@@ -89,14 +89,16 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Silver;
+            BackColor = SystemColors.Control;
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(btnEdit);
             Controls.Add(lblCategory);
             Controls.Add(btnPractice);
             Controls.Add(lblCategoryLabel);
             Controls.Add(lblName);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "DeckControl";
-            Size = new Size(209, 126);
+            Size = new Size(207, 124);
             ResumeLayout(false);
             PerformLayout();
         }

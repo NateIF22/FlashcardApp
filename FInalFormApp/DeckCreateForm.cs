@@ -34,6 +34,18 @@ namespace FinalFormApp
 
         private void lblSave_Click(object sender, EventArgs e)
         {
+            if (Validators.IsPresent(tbDeckName.Text) == false)
+            {
+                MessageBox.Show("Deck name is required.");
+                tbDeckName.Focus();
+                return;
+            }
+            else if (Validators.IsPresent(tbDeckType.Text) == false)
+            {
+                MessageBox.Show("Deck type is required.");
+                tbDeckType.Focus();
+                return;
+            }
             MessageBox.Show($"Deck: {Deck.Name} saved successfully!");
             this.DialogResult = DialogResult.OK;
             // Needs to show the card edit form

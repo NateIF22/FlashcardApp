@@ -35,40 +35,46 @@
             // 
             // tbContext
             // 
+            tbContext.BorderStyle = BorderStyle.FixedSingle;
             tbContext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbContext.Location = new Point(27, 141);
             tbContext.Multiline = true;
             tbContext.Name = "tbContext";
             tbContext.ReadOnly = true;
-            tbContext.Size = new Size(317, 174);
+            tbContext.Size = new Size(320, 206);
             tbContext.TabIndex = 2;
             tbContext.Text = "Possible context for the word or question goes here.";
+            tbContext.TextAlign = HorizontalAlignment.Center;
             // 
             // lblQuestion
             // 
             lblQuestion.AutoSize = true;
             lblQuestion.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuestion.Location = new Point(99, 77);
+            lblQuestion.Location = new Point(99, 76);
+            lblQuestion.MinimumSize = new Size(170, 31);
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(170, 31);
             lblQuestion.TabIndex = 3;
             lblQuestion.Text = "Word/Question";
+            lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblFront
             // 
             lblFront.AutoSize = true;
             lblFront.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFront.Location = new Point(148, 13);
+            lblFront.Location = new Point(150, 14);
+            lblFront.MinimumSize = new Size(72, 31);
             lblFront.Name = "lblFront";
             lblFront.Size = new Size(72, 31);
             lblFront.TabIndex = 4;
             lblFront.Text = "Front";
+            lblFront.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CardFrontControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDark;
+            BackColor = SystemColors.Control;
             Controls.Add(lblFront);
             Controls.Add(lblQuestion);
             Controls.Add(tbContext);

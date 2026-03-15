@@ -6,21 +6,16 @@ namespace FinalFormApp
 {
     internal class Validators
     {
-        public bool ValidateDeck(Deck deck)
+        public static bool IsPresent(string input)
         {
-            if (string.IsNullOrWhiteSpace(deck.Name))
+            if (string.IsNullOrWhiteSpace(input))
             {
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(deck.Category))
+            else
             {
-                return false;
+                return true;
             }
-            if (deck.Cards == null || deck.Cards.Count == 0)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }
