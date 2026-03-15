@@ -24,6 +24,18 @@ namespace FinalFormApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (Validators.IsPresent(tbQuestion.Text) == false)
+            {
+                MessageBox.Show("Question is required.");
+                tbQuestion.Focus();
+                return;
+            }
+            else if (Validators.IsPresent(tbAnswer.Text) == false)
+            {
+                MessageBox.Show("Answer is required.");
+                tbAnswer.Focus();
+                return;
+            }
             MessageBox.Show($"Card sucessfuly saved to '{_deck.Name}'.");
             this.DialogResult = DialogResult.OK;
             this.Close();

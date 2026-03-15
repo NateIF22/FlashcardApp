@@ -12,16 +12,16 @@ namespace FinalFormApp
     public partial class DeckEditForm : Form
     {
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        private Deck DeckDetails { get; set; }
+        private Deck CurrentDeck { get; set; }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         private Card? SelectedCard { get; set; }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         private BindingList<Deck> Decks { get; set; }
-        public DeckEditForm(Deck deckDetails, BindingList<Deck> decks)
+        public DeckEditForm(Deck currentDeck, BindingList<Deck> decks)
         {
-            DeckDetails = deckDetails;
+            CurrentDeck = currentDeck;
             Decks = decks;
             InitializeComponent();
             
@@ -29,9 +29,9 @@ namespace FinalFormApp
 
         private void DeckEditForm_Load(object sender, EventArgs e)
         {
-            lblCardCount.Text = DeckDetails.CardCount.ToString();
-            lblName.Text = DeckDetails.Name;
-            lblType.Text = DeckDetails.Category;
+            lblCardCount.Text = CurrentDeck.CardCount.ToString();
+            lblName.Text = CurrentDeck.Name;
+            lblType.Text = CurrentDeck.Category;
             btnEditCard.Enabled = false;
             UpdateCards();
         }
@@ -40,17 +40,17 @@ namespace FinalFormApp
         {
             // Adds a new card to the deck and updates the card count. Opens the card form for the new card and waits for it to close before reenabling the button(
             Card newCard = new Card();
-            CardEditForm cardEditForm = new CardEditForm(newCard, DeckDetails);
+            CardEditForm cardEditForm = new CardEditForm(newCard, CurrentDeck);
             cardEditForm.ShowDialog();
 
             //if the card was saved, add it to the deck and update the card count
             if (cardEditForm.DialogResult == DialogResult.OK)
             {
                 btnEditCard.Enabled = false;
-                DeckDetails.Cards.Add(newCard);
-                newCard.Id = DeckDetails.Cards.IndexOf(newCard); // set the ID of the card to the index of the card in the list of cards
-                DeckDetails.CardCount = DeckDetails.Cards.Count;
-                lblCardCount.Text = DeckDetails.CardCount.ToString();
+                CurrentDeck.Cards.Add(newCard);
+                newCard.Id = CurrentDeck.Cards.IndexOf(newCard); // set the ID of the card to the index of the card in the list of cards
+                CurrentDeck.CardCount = CurrentDeck.Cards.Count;
+                lblCardCount.Text = CurrentDeck.CardCount.ToString();
                 
                 UpdateCards();
             }
@@ -64,7 +64,7 @@ namespace FinalFormApp
                 return;
             }
             // logic to enable the edit card button when a card is selected in the list vie
-            Card selectedCard = DeckDetails.Cards[lvCards.SelectedIndices[0]];
+            Card selectedCard = CurrentDeck.Cards[lvCards.SelectedIndices[0]];
             SelectedCard = selectedCard;
             btnEditCard.Enabled = true;
 
@@ -74,7 +74,7 @@ namespace FinalFormApp
         {
             lvCards.Items.Clear();
             // Logic to update the list view with the cards in the deck.
-            foreach (Card card in DeckDetails.Cards)
+            foreach (Card card in CurrentDeck.Cards)
             {
                 // goes therough the columns
                 ListViewItem newItem = new ListViewItem(card.Id.ToString());
@@ -90,7 +90,7 @@ namespace FinalFormApp
         {
             if (SelectedCard != null)
             {
-                CardEditForm cardEditForm = new CardEditForm(SelectedCard, DeckDetails);
+                CardEditForm cardEditForm = new CardEditForm(SelectedCard, CurrentDeck);
                 cardEditForm.ShowDialog();
                 if (cardEditForm.DialogResult == DialogResult.OK)
                 {
@@ -103,14 +103,14 @@ namespace FinalFormApp
         {
             // remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
             var confirmResult = MessageBox.Show(
-                $"Are you sure you want to delete the deck: {DeckDetails.Name}? This is permanent",
+                $"Are you sure you want to delete the deck: {CurrentDeck.Name}? This is permanent",
                 "Confirm Delete?",
                 MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
                 this.Close();
-                MessageBox.Show($"Deck: {DeckDetails.Name} removed successfully.", "Deck Removal");
-                Decks.Remove(DeckDetails);
+                MessageBox.Show($"Deck: {CurrentDeck.Name} removed successfully.", "Deck Removal");
+                Decks.Remove(CurrentDeck);
             }
         }
 
@@ -123,12 +123,12 @@ namespace FinalFormApp
         private void btnEditDeck_Click(object sender, EventArgs e)
         {
             // Logic to edit the deck details (name and category). Updates the labels on the form after editing the details
-            DeckCreateForm deckCreateForm = new DeckCreateForm(DeckDetails);
+            DeckCreateForm deckCreateForm = new DeckCreateForm(CurrentDeck);
             if (deckCreateForm.ShowDialog() == DialogResult.OK)
             {
                 // Update the deck details and refresh the labels on the form
-                lblName.Text = DeckDetails.Name;
-                lblType.Text = DeckDetails.Category;
+                lblName.Text = CurrentDeck.Name;
+                lblType.Text = CurrentDeck.Category;
             }
         }
     }

@@ -61,6 +61,7 @@
             // 
             tbQuestionNote.Location = new Point(106, 59);
             tbQuestionNote.Name = "tbQuestionNote";
+            tbQuestionNote.PlaceholderText = "(optional)";
             tbQuestionNote.Size = new Size(175, 27);
             tbQuestionNote.TabIndex = 5;
             // 
@@ -77,6 +78,7 @@
             // 
             tbQuestion.Location = new Point(106, 26);
             tbQuestion.Name = "tbQuestion";
+            tbQuestion.PlaceholderText = "Guten Abend";
             tbQuestion.Size = new Size(175, 27);
             tbQuestion.TabIndex = 3;
             // 
@@ -126,6 +128,7 @@
             // 
             tbAnswerNote.Location = new Point(106, 59);
             tbAnswerNote.Name = "tbAnswerNote";
+            tbAnswerNote.PlaceholderText = "(optional)";
             tbAnswerNote.Size = new Size(175, 27);
             tbAnswerNote.TabIndex = 5;
             // 
@@ -142,6 +145,7 @@
             // 
             tbAnswer.Location = new Point(106, 26);
             tbAnswer.Name = "tbAnswer";
+            tbAnswer.PlaceholderText = "Good Morning";
             tbAnswer.Size = new Size(175, 27);
             tbAnswer.TabIndex = 3;
             // 
