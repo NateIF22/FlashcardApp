@@ -14,8 +14,15 @@ namespace FinalFormApp
         private Deck Deck;
         public DeckCreateForm(Deck? deck)
         {
-            Deck = new Deck();
-            InitializeComponent();
+            if (deck == null)
+            {
+                Deck = new Deck();
+            }
+            else
+            {
+                Deck = deck;
+            }
+                InitializeComponent();
 
         }
 

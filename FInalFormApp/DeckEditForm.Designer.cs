@@ -152,7 +152,7 @@
             btnEditDeck.TabIndex = 11;
             btnEditDeck.Text = "Edit Deck";
             btnEditDeck.UseVisualStyleBackColor = true;
-            btnEditDeck.Click += this.btnEditDeck_Click;
+            btnEditDeck.Click += btnEditDeck_Click;
             // 
             // DeckEditForm
             // 
@@ -173,6 +173,7 @@
             Controls.Add(lblNameLabel);
             Name = "DeckEditForm";
             Text = "DeckView";
+            Load += DeckEditForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

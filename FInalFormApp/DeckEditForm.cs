@@ -15,8 +15,16 @@ namespace FinalFormApp
         public Deck DeckDetails { get; set; }
         public DeckEditForm(Deck deckDetails)
         {
-            InitializeComponent();
             DeckDetails = deckDetails;
+            InitializeComponent();
+            
+        }
+
+        private void DeckEditForm_Load(object sender, EventArgs e)
+        {
+            lblCardCount.Text = DeckDetails.CardCount.ToString();
+            lblName.Text = DeckDetails.Name;
+            lblType.Text = DeckDetails.Category;
         }
 
         private void btnNewCard_Click(object sender, EventArgs e)
@@ -64,6 +72,12 @@ namespace FinalFormApp
         {
             // Logic to edit the deck details (name and category). Updates the labels on the form after editing the details
             DeckCreateForm deckCreateForm = new DeckCreateForm(DeckDetails);
+            if (deckCreateForm.ShowDialog() == DialogResult.OK)
+            {
+                // Update the deck details and refresh the labels on the form
+                lblName.Text = DeckDetails.Name;
+                lblType.Text = DeckDetails.Category;
+            }
         }
     }
 }

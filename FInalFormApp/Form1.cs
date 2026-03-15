@@ -64,8 +64,6 @@ namespace FInalFormApp
             {
                 // ands a new deck to the list of decks
                 Decks.Add(deckForm.GetDeck());
-
-
             }
         }
 
