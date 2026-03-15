@@ -101,10 +101,17 @@ namespace FinalFormApp
 
         private void btnRemoveDeck_Click(object sender, EventArgs e)
         {
-            // Logic to remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
-            MessageBox.Show($"Deck: {DeckDetails.Name} removed successfully.");
-            this.Close();
-            Decks.Remove(DeckDetails);
+            // remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
+            var confirmResult = MessageBox.Show(
+                $"Are you sure you want to delete the deck: {DeckDetails.Name}? This is permanent",
+                "Confirm Delete?",
+                MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                this.Close();
+                MessageBox.Show($"Deck: {DeckDetails.Name} removed successfully.", "Deck Removal");
+                Decks.Remove(DeckDetails);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
