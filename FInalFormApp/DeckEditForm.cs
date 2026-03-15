@@ -13,6 +13,7 @@ namespace FinalFormApp
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
 
         public Deck DeckDetails { get; set; }
+        public Card SelectedCard { get; set; }
         public DeckEditForm(Deck deckDetails)
         {
             DeckDetails = deckDetails;
@@ -25,6 +26,8 @@ namespace FinalFormApp
             lblCardCount.Text = DeckDetails.CardCount.ToString();
             lblName.Text = DeckDetails.Name;
             lblType.Text = DeckDetails.Category;
+            btnEditCard.Enabled = false;
+            UpdateCards();
         }
 
         private void btnNewCard_Click(object sender, EventArgs e)
@@ -37,29 +40,59 @@ namespace FinalFormApp
             //if the card was saved, add it to the deck and update the card count
             if (cardEditForm.DialogResult == DialogResult.OK)
             {
+                btnEditCard.Enabled = false;
                 DeckDetails.Cards.Add(newCard);
                 DeckDetails.CardCount = DeckDetails.Cards.Count;
                 lblCardCount.Text = DeckDetails.CardCount.ToString();
+                UpdateCards();
+            }
+        }
+
+        private void lvCards_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvCards.SelectedIndices.Count == 0)
+            {
+                btnEditCard.Enabled = false;
+                return;
+            }
+            // logic to enable the edit card button when a card is selected in the list vie
+            Card selectedCard = DeckDetails.Cards[lvCards.SelectedIndices[0]];
+            SelectedCard = selectedCard;
+            btnEditCard.Enabled = true;
+
+        }
+
+        private void UpdateCards()
+        {
+            lvCards.Items.Clear();
+            // Logic to update the list view with the cards in the deck.
+            foreach (Card card in DeckDetails.Cards)
+            {
+                ListViewItem newItem = new ListViewItem();
+                newItem.SubItems.Add(card.Question);
+                newItem.SubItems.Add(card.QuestionNote);
+                newItem.SubItems.Add(card.Answer);
+                newItem.SubItems.Add(card.AnswerNote);
+                lvCards.Items.Add(newItem);
             }
         }
 
         private void btnEditCard_Click(object sender, EventArgs e)
         {
-            // Logic to edit the selected card in the list view. Opens the card form for the selected card and waits for it to close before reenabling the button
+            if (SelectedCard != null)
+            {
+                CardEditForm cardEditForm = new CardEditForm(SelectedCard, DeckDetails);
+                cardEditForm.ShowDialog();
+                if (cardEditForm.DialogResult == DialogResult.OK)
+                {
+                    UpdateCards();
+                }
+            }
         }
 
         private void btnRemoveDeck_Click(object sender, EventArgs e)
         {
             // Logic to remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
-        }
-
-        private void UpdateCardList()
-        {
-            lvCards.Items.Clear();
-            foreach (Card card in DeckDetails.Cards)
-            {
-                // Adds each card in the deck to the list view
-            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

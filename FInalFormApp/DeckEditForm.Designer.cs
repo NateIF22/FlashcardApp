@@ -39,9 +39,14 @@
             lblType = new Label();
             btnExit = new Button();
             btnEditDeck = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             gbDeckEdit = new GroupBox();
             gbDangerEdits = new GroupBox();
+            lvCards = new ListView();
+            chId = new ColumnHeader();
+            chQuestion = new ColumnHeader();
+            chQuestionNotes = new ColumnHeader();
+            chAnswer = new ColumnHeader();
+            chAnswerNotes = new ColumnHeader();
             gbDeckEdit.SuspendLayout();
             gbDangerEdits.SuspendLayout();
             SuspendLayout();
@@ -49,7 +54,7 @@
             // lblNameLabel
             // 
             lblNameLabel.AutoSize = true;
-            lblNameLabel.Location = new Point(11, 27);
+            lblNameLabel.Location = new Point(15, 25);
             lblNameLabel.Name = "lblNameLabel";
             lblNameLabel.Size = new Size(49, 20);
             lblNameLabel.TabIndex = 0;
@@ -58,7 +63,7 @@
             // lblCardCountLabel
             // 
             lblCardCountLabel.AutoSize = true;
-            lblCardCountLabel.Location = new Point(11, 66);
+            lblCardCountLabel.Location = new Point(15, 64);
             lblCardCountLabel.Name = "lblCardCountLabel";
             lblCardCountLabel.Size = new Size(83, 20);
             lblCardCountLabel.TabIndex = 1;
@@ -67,7 +72,7 @@
             // lblTypeLabel
             // 
             lblTypeLabel.AutoSize = true;
-            lblTypeLabel.Location = new Point(11, 107);
+            lblTypeLabel.Location = new Point(15, 105);
             lblTypeLabel.Name = "lblTypeLabel";
             lblTypeLabel.Size = new Size(40, 20);
             lblTypeLabel.TabIndex = 2;
@@ -75,7 +80,7 @@
             // 
             // btnNewCard
             // 
-            btnNewCard.Location = new Point(15, 159);
+            btnNewCard.Location = new Point(19, 157);
             btnNewCard.Name = "btnNewCard";
             btnNewCard.Size = new Size(94, 29);
             btnNewCard.TabIndex = 3;
@@ -85,7 +90,7 @@
             // 
             // btnEditCard
             // 
-            btnEditCard.Location = new Point(15, 194);
+            btnEditCard.Location = new Point(19, 192);
             btnEditCard.Name = "btnEditCard";
             btnEditCard.Size = new Size(94, 29);
             btnEditCard.TabIndex = 4;
@@ -95,7 +100,7 @@
             // 
             // btnRemoveDeck
             // 
-            btnRemoveDeck.Location = new Point(11, 26);
+            btnRemoveDeck.Location = new Point(15, 26);
             btnRemoveDeck.Name = "btnRemoveDeck";
             btnRemoveDeck.Size = new Size(98, 29);
             btnRemoveDeck.TabIndex = 5;
@@ -106,7 +111,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(66, 27);
+            lblName.Location = new Point(70, 25);
             lblName.Name = "lblName";
             lblName.Size = new Size(49, 20);
             lblName.TabIndex = 7;
@@ -115,7 +120,7 @@
             // lblCardCount
             // 
             lblCardCount.AutoSize = true;
-            lblCardCount.Location = new Point(100, 66);
+            lblCardCount.Location = new Point(104, 64);
             lblCardCount.Name = "lblCardCount";
             lblCardCount.Size = new Size(17, 20);
             lblCardCount.TabIndex = 8;
@@ -124,7 +129,7 @@
             // lblType
             // 
             lblType.AutoSize = true;
-            lblType.Location = new Point(57, 107);
+            lblType.Location = new Point(61, 105);
             lblType.Name = "lblType";
             lblType.Size = new Size(40, 20);
             lblType.TabIndex = 9;
@@ -132,7 +137,7 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(15, 264);
+            btnExit.Location = new Point(19, 262);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(94, 29);
             btnExit.TabIndex = 10;
@@ -142,20 +147,13 @@
             // 
             // btnEditDeck
             // 
-            btnEditDeck.Location = new Point(15, 229);
+            btnEditDeck.Location = new Point(19, 227);
             btnEditDeck.Name = "btnEditDeck";
             btnEditDeck.Size = new Size(94, 29);
             btnEditDeck.TabIndex = 11;
             btnEditDeck.Text = "Edit Deck";
             btnEditDeck.UseVisualStyleBackColor = true;
             btnEditDeck.Click += btnEditDeck_Click;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(148, 12);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(640, 426);
-            flowLayoutPanel1.TabIndex = 12;
             // 
             // gbDeckEdit
             // 
@@ -186,14 +184,50 @@
             gbDangerEdits.TabStop = false;
             gbDangerEdits.Text = "Danger";
             // 
+            // lvCards
+            // 
+            lvCards.Columns.AddRange(new ColumnHeader[] { chId, chQuestion, chQuestionNotes, chAnswer, chAnswerNotes });
+            lvCards.FullRowSelect = true;
+            lvCards.Location = new Point(148, 12);
+            lvCards.Name = "lvCards";
+            lvCards.Size = new Size(640, 426);
+            lvCards.TabIndex = 15;
+            lvCards.UseCompatibleStateImageBehavior = false;
+            lvCards.View = View.Details;
+            lvCards.SelectedIndexChanged += lvCards_SelectedIndexChanged;
+            // 
+            // chId
+            // 
+            chId.Text = "Id";
+            // 
+            // chQuestion
+            // 
+            chQuestion.Text = "Question";
+            chQuestion.Width = 120;
+            // 
+            // chQuestionNotes
+            // 
+            chQuestionNotes.Text = "Question Notes";
+            chQuestionNotes.Width = 160;
+            // 
+            // chAnswer
+            // 
+            chAnswer.Text = "Answer";
+            chAnswer.Width = 120;
+            // 
+            // chAnswerNotes
+            // 
+            chAnswerNotes.Text = "Answer Notes";
+            chAnswerNotes.Width = 160;
+            // 
             // DeckEditForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lvCards);
             Controls.Add(gbDangerEdits);
             Controls.Add(gbDeckEdit);
-            Controls.Add(flowLayoutPanel1);
             Name = "DeckEditForm";
             Text = "DeckView";
             Load += DeckEditForm_Load;
@@ -216,8 +250,13 @@
         private Label lblType;
         private Button btnExit;
         private Button btnEditDeck;
-        private FlowLayoutPanel flowLayoutPanel1;
         private GroupBox gbDeckEdit;
         private GroupBox gbDangerEdits;
+        private ListView lvCards;
+        private ColumnHeader chId;
+        private ColumnHeader chQuestion;
+        private ColumnHeader chQuestionNotes;
+        private ColumnHeader chAnswer;
+        private ColumnHeader chAnswerNotes;
     }
 }

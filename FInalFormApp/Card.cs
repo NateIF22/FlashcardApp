@@ -6,15 +6,15 @@ namespace FinalFormApp
 {
     public class Card
     {
-        public string Title { get; set; }
+        public int Id { get; set; }
         public string Question { get; set; }
         public string QuestionNote { get; set; }
         public string AnswerNote { get; set; }
         public string Answer { get; set; }
      
-        public Card(string title, string question, string answer, string question_note, string answer_note)
+        public Card(int id, string question, string answer, string question_note, string answer_note)
         {
-            Title = title;
+            Id = id;
             Question = question;
             Answer = answer;
             QuestionNote = question_note;
@@ -24,7 +24,7 @@ namespace FinalFormApp
 
         public Card() 
         {
-            Title = string.Empty;
+            Id = 0;
             Question = string.Empty;
             Answer = string.Empty;
             QuestionNote = string.Empty;

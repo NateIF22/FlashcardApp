@@ -25,7 +25,7 @@ namespace FinalFormApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Deck: {_deck.Name} Card: {_card.Question} - {_card.QuestionNote} - {_card.Answer} - {_card.AnswerNote}");
+            MessageBox.Show($"Card sucessfuly saved to '{_deck.Name}'.");
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -37,6 +37,12 @@ namespace FinalFormApp
             tbQuestionNote.DataBindings.Add("Text", _card, "QuestionNote");
             tbAnswer.DataBindings.Add("Text", _card, "Answer");
             tbAnswerNote.DataBindings.Add("Text", _card, "AnswerNote");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
