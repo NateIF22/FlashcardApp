@@ -46,15 +46,6 @@ namespace FInalFormApp
             lvDecks.Controls.Add(item);
         }
 
-        public void UpdateDecks()
-        {
-            lvDecks.Controls.Clear();
-            foreach (Deck deck in Decks)
-            {
-                lvDecks.Controls.Add(new DeckControl(deck));
-            }
-        }
-
         private void btnNewDeck_Click(object sender, EventArgs e)
         {
             // Logic to add a new deck to the list box
