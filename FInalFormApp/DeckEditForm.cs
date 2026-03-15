@@ -12,12 +12,17 @@ namespace FinalFormApp
     public partial class DeckEditForm : Form
     {
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        private Deck DeckDetails { get; set; }
 
-        public Deck DeckDetails { get; set; }
-        public Card SelectedCard { get; set; }
-        public DeckEditForm(Deck deckDetails)
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        private Card? SelectedCard { get; set; }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        private BindingList<Deck> Decks { get; set; }
+        public DeckEditForm(Deck deckDetails, BindingList<Deck> decks)
         {
             DeckDetails = deckDetails;
+            Decks = decks;
             InitializeComponent();
             
         }
@@ -97,7 +102,9 @@ namespace FinalFormApp
         private void btnRemoveDeck_Click(object sender, EventArgs e)
         {
             // Logic to remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
-            
+            MessageBox.Show($"Deck: {DeckDetails.Name} removed successfully.");
+            this.Close();
+            Decks.Remove(DeckDetails);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

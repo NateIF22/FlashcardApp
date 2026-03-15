@@ -13,9 +13,13 @@ namespace FinalFormApp
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Deck DeckDetails { get; set; }
 
-        public DeckControl(Deck deckDetails)
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        private BindingList<Deck> Decks { get; set; }
+
+        public DeckControl(Deck deckDetails, BindingList<Deck> decks)
         {
             InitializeComponent();
+            Decks = decks;
             DeckDetails = deckDetails;
 
             // Syncs the labels with the deck details
@@ -38,7 +42,7 @@ namespace FinalFormApp
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            var deckEditForm = new DeckEditForm(DeckDetails);
+            var deckEditForm = new DeckEditForm(DeckDetails, Decks);
             deckEditForm.ShowDialog();
         }
     }

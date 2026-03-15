@@ -10,7 +10,6 @@ namespace FinalFormApp
 {
     public partial class CardEditForm : Form
     {
-        // Change later
         public Card _card;
         public Deck _deck;
         public CardEditForm(Card card, Deck deck)

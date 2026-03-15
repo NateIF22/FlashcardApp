@@ -42,7 +42,7 @@ namespace FInalFormApp
 
         private void AddDeckControl(Deck deck)
         {
-            var item = new DeckControl(deck);
+            var item = new DeckControl(deck, Decks);
             lvDecks.Controls.Add(item);
         }
 
