@@ -22,7 +22,8 @@ namespace FinalFormApp
             {
                 Deck = deck;
             }
-                InitializeComponent();
+            InitializeComponent();
+            lblDeckName.Focus();
 
         }
 
@@ -33,7 +34,7 @@ namespace FinalFormApp
 
         private void lblSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Deck: {Deck.Name} created successfully!");
+            MessageBox.Show($"Deck: {Deck.Name} saved successfully!");
             this.DialogResult = DialogResult.OK;
             // Needs to show the card edit form
             this.Close();

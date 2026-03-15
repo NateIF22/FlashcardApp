@@ -42,8 +42,10 @@ namespace FinalFormApp
             {
                 btnEditCard.Enabled = false;
                 DeckDetails.Cards.Add(newCard);
+                newCard.Id = DeckDetails.Cards.IndexOf(newCard); // set the ID of the card to the index of the card in the list of cards
                 DeckDetails.CardCount = DeckDetails.Cards.Count;
                 lblCardCount.Text = DeckDetails.CardCount.ToString();
+                
                 UpdateCards();
             }
         }
@@ -68,7 +70,8 @@ namespace FinalFormApp
             // Logic to update the list view with the cards in the deck.
             foreach (Card card in DeckDetails.Cards)
             {
-                ListViewItem newItem = new ListViewItem();
+                // goes therough the columns
+                ListViewItem newItem = new ListViewItem(card.Id.ToString());
                 newItem.SubItems.Add(card.Question);
                 newItem.SubItems.Add(card.QuestionNote);
                 newItem.SubItems.Add(card.Answer);
