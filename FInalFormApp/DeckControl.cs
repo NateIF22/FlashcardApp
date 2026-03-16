@@ -33,7 +33,7 @@ namespace FinalFormApp
         {
             if (DeckDetails.CardCount == 0)
             {
-                MessageBox.Show("This deck has no cards to practice with. Please add some cards before practicing.", "No Cards");
+                MessageBox.Show("Please add cards before practicing.", "No Cards", MessageBoxButtons.OK);
                 return;
             }
             PracticeForm practiceForm = new PracticeForm(DeckDetails);
