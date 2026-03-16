@@ -93,7 +93,7 @@
             cardBackControl.BorderStyle = BorderStyle.FixedSingle;
             cardBackControl.Location = new Point(182, 12);
             cardBackControl.Name = "cardBackControl";
-            cardBackControl.Size = new Size(368, 479);
+            cardBackControl.Size = new Size(371, 479);
             cardBackControl.TabIndex = 2;
             // 
             // cardFrontControl
@@ -102,9 +102,9 @@
             cardFrontControl.BackColor = SystemColors.Control;
             cardFrontControl.BorderStyle = BorderStyle.FixedSingle;
             cardFrontControl.Location = new Point(182, 12);
+            cardFrontControl.MinimumSize = new Size(371, 0);
             cardFrontControl.Name = "cardFrontControl";
-            cardFrontControl.Padding = new Padding(0, 0, 0, 5);
-            cardFrontControl.Size = new Size(368, 479);
+            cardFrontControl.Size = new Size(371, 479);
             cardFrontControl.TabIndex = 3;
             // 
             // PracticeForm
