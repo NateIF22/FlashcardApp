@@ -34,6 +34,8 @@
             // 
             // btnNewDeck
             // 
+            btnNewDeck.Anchor = AnchorStyles.Top;
+            btnNewDeck.AutoSize = true;
             btnNewDeck.Location = new Point(315, 12);
             btnNewDeck.Name = "btnNewDeck";
             btnNewDeck.Size = new Size(150, 38);
@@ -44,7 +46,9 @@
             // 
             // lvDecks
             // 
+            lvDecks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lvDecks.AutoScroll = true;
+            lvDecks.AutoSize = true;
             lvDecks.Location = new Point(62, 56);
             lvDecks.Name = "lvDecks";
             lvDecks.Size = new Size(652, 385);
@@ -60,6 +64,7 @@
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

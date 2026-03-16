@@ -38,6 +38,7 @@
             // 
             // btnExit
             // 
+            btnExit.AutoSize = true;
             btnExit.Location = new Point(12, 12);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(164, 58);
@@ -48,6 +49,7 @@
             // 
             // btnFlip
             // 
+            btnFlip.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnFlip.Location = new Point(286, 393);
             btnFlip.Name = "btnFlip";
             btnFlip.Size = new Size(164, 58);
@@ -58,7 +60,10 @@
             // 
             // btnCorrect
             // 
-            btnCorrect.BackColor = Color.LawnGreen;
+            btnCorrect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCorrect.AutoSize = true;
+            btnCorrect.BackColor = Color.LimeGreen;
+            btnCorrect.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCorrect.Location = new Point(556, 369);
             btnCorrect.Name = "btnCorrect";
             btnCorrect.Size = new Size(164, 58);
@@ -69,7 +74,10 @@
             // 
             // btnIncorrect
             // 
-            btnIncorrect.BackColor = Color.Red;
+            btnIncorrect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnIncorrect.AutoSize = true;
+            btnIncorrect.BackColor = Color.OrangeRed;
+            btnIncorrect.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIncorrect.Location = new Point(556, 433);
             btnIncorrect.Name = "btnIncorrect";
             btnIncorrect.Size = new Size(164, 58);
@@ -80,6 +88,7 @@
             // 
             // cardBackControl
             // 
+            cardBackControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cardBackControl.BackColor = SystemColors.Control;
             cardBackControl.BorderStyle = BorderStyle.FixedSingle;
             cardBackControl.Location = new Point(182, 12);
@@ -89,10 +98,12 @@
             // 
             // cardFrontControl
             // 
+            cardFrontControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cardFrontControl.BackColor = SystemColors.Control;
             cardFrontControl.BorderStyle = BorderStyle.FixedSingle;
             cardFrontControl.Location = new Point(182, 12);
             cardFrontControl.Name = "cardFrontControl";
+            cardFrontControl.Padding = new Padding(0, 0, 0, 5);
             cardFrontControl.Size = new Size(368, 479);
             cardFrontControl.TabIndex = 3;
             // 
@@ -107,9 +118,11 @@
             Controls.Add(btnCorrect);
             Controls.Add(btnFlip);
             Controls.Add(btnExit);
+            MinimumSize = new Size(750, 550);
             Name = "PracticeForm";
             Text = "Practice";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

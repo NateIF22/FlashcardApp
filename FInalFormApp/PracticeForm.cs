@@ -12,7 +12,7 @@ namespace FinalFormApp
     public partial class PracticeForm : Form
     {
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        // This is the list of cards that are being practiced, when the practice form is opened, this list should be populated with the cards from the deck that is being practiced.
+        // THe list of cards that are being practiced
         public List<Card> CardsInPractice { get; set; }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -44,8 +44,7 @@ namespace FinalFormApp
         }
 
         private void btnFlip_Click(object sender, EventArgs e)
-        {
-            // move to the next card in the list and update the card front and back controls with the new card details
+        { 
             SwitchCardVisibility();
             if (cardBackControl.Visible) 
             {
@@ -67,7 +66,7 @@ namespace FinalFormApp
         {
             cardBackControl.Visible = !cardBackControl.Visible;
             cardFrontControl.Visible = !cardFrontControl.Visible;
-            // Populate the back of the card with the current card details
+            // Switch the vilibility of the card side controls
             if (cardBackControl.Visible)
             {
                 cardBackControl.PopulateCardDetails(CurrentCard);

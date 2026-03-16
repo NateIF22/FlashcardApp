@@ -35,6 +35,7 @@
             // 
             // tbContext
             // 
+            tbContext.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbContext.BorderStyle = BorderStyle.FixedSingle;
             tbContext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbContext.Location = new Point(27, 141);
@@ -48,24 +49,29 @@
             // 
             // lblQuestion
             // 
+            lblQuestion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblQuestion.AutoSize = true;
             lblQuestion.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuestion.Location = new Point(99, 76);
-            lblQuestion.MinimumSize = new Size(170, 31);
+            lblQuestion.Location = new Point(0, 54);
+            lblQuestion.MaximumSize = new Size(377, 0);
+            lblQuestion.MinimumSize = new Size(377, 0);
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(170, 31);
+            lblQuestion.Size = new Size(377, 31);
             lblQuestion.TabIndex = 3;
             lblQuestion.Text = "Word/Question";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblFront
             // 
+            lblFront.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblFront.AutoSize = true;
+            lblFront.BorderStyle = BorderStyle.FixedSingle;
             lblFront.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFront.Location = new Point(150, 14);
-            lblFront.MinimumSize = new Size(72, 31);
+            lblFront.Location = new Point(3, 14);
+            lblFront.MaximumSize = new Size(371, 31);
+            lblFront.MinimumSize = new Size(371, 31);
             lblFront.Name = "lblFront";
-            lblFront.Size = new Size(72, 31);
+            lblFront.Size = new Size(371, 31);
             lblFront.TabIndex = 4;
             lblFront.Text = "Front";
             lblFront.TextAlign = ContentAlignment.MiddleCenter;

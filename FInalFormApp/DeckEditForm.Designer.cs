@@ -157,6 +157,7 @@
             // 
             // gbDeckEdit
             // 
+            gbDeckEdit.AutoSize = true;
             gbDeckEdit.Controls.Add(btnEditCard);
             gbDeckEdit.Controls.Add(lblNameLabel);
             gbDeckEdit.Controls.Add(btnEditDeck);
@@ -169,13 +170,15 @@
             gbDeckEdit.Controls.Add(lblName);
             gbDeckEdit.Location = new Point(12, 12);
             gbDeckEdit.Name = "gbDeckEdit";
-            gbDeckEdit.Size = new Size(130, 301);
+            gbDeckEdit.Size = new Size(130, 317);
             gbDeckEdit.TabIndex = 13;
             gbDeckEdit.TabStop = false;
             gbDeckEdit.Text = "Deck Edit";
             // 
             // gbDangerEdits
             // 
+            gbDangerEdits.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            gbDangerEdits.AutoSize = true;
             gbDangerEdits.Controls.Add(btnRemoveDeck);
             gbDangerEdits.Location = new Point(12, 374);
             gbDangerEdits.Name = "gbDangerEdits";
@@ -186,6 +189,7 @@
             // 
             // lvCards
             // 
+            lvCards.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             lvCards.Columns.AddRange(new ColumnHeader[] { chId, chQuestion, chQuestionNotes, chAnswer, chAnswerNotes });
             lvCards.FullRowSelect = true;
             lvCards.Location = new Point(148, 12);
@@ -228,6 +232,7 @@
             Controls.Add(lvCards);
             Controls.Add(gbDangerEdits);
             Controls.Add(gbDeckEdit);
+            MinimumSize = new Size(818, 497);
             Name = "DeckEditForm";
             Text = "DeckView";
             Load += DeckEditForm_Load;
@@ -235,6 +240,7 @@
             gbDeckEdit.PerformLayout();
             gbDangerEdits.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

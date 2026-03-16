@@ -35,6 +35,7 @@
             // 
             // tbContext
             // 
+            tbContext.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbContext.BorderStyle = BorderStyle.FixedSingle;
             tbContext.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbContext.Location = new Point(27, 141);
@@ -48,22 +49,29 @@
             // 
             // lblAnswer
             // 
+            lblAnswer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblAnswer.AutoSize = true;
             lblAnswer.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAnswer.Location = new Point(99, 76);
+            lblAnswer.Location = new Point(0, 54);
+            lblAnswer.MaximumSize = new Size(377, 0);
+            lblAnswer.MinimumSize = new Size(377, 0);
             lblAnswer.Name = "lblAnswer";
-            lblAnswer.Size = new Size(153, 31);
+            lblAnswer.Size = new Size(377, 31);
             lblAnswer.TabIndex = 3;
             lblAnswer.Text = "Word/Answer";
             lblAnswer.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblBack
             // 
+            lblBack.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblBack.AutoSize = true;
+            lblBack.BorderStyle = BorderStyle.FixedSingle;
             lblBack.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBack.Location = new Point(150, 14);
+            lblBack.Location = new Point(3, 14);
+            lblBack.MaximumSize = new Size(371, 31);
+            lblBack.MinimumSize = new Size(371, 31);
             lblBack.Name = "lblBack";
-            lblBack.Size = new Size(65, 31);
+            lblBack.Size = new Size(371, 31);
             lblBack.TabIndex = 4;
             lblBack.Text = "Back";
             lblBack.TextAlign = ContentAlignment.MiddleCenter;

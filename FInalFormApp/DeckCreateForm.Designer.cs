@@ -101,6 +101,8 @@
             Controls.Add(lblDeckName);
             Controls.Add(lblCancel);
             Controls.Add(lblSave);
+            MaximumSize = new Size(357, 189);
+            MinimumSize = new Size(357, 189);
             Name = "DeckCreateForm";
             Text = "DeckForm";
             Load += DeckForm_Load;

@@ -27,8 +27,6 @@ namespace FinalFormApp
             lblCategory.DataBindings.Add("Text", DeckDetails, "Category");
         }
 
-
-
         private void btnPractice_Click(object sender, EventArgs e)
         {
             if (DeckDetails.CardCount == 0)

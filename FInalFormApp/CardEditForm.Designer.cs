@@ -46,6 +46,7 @@
             // 
             // gbCardFront
             // 
+            gbCardFront.Anchor = AnchorStyles.Top;
             gbCardFront.Controls.Add(tbQuestionNote);
             gbCardFront.Controls.Add(lblQuestionNote);
             gbCardFront.Controls.Add(tbQuestion);
@@ -76,6 +77,7 @@
             // 
             // tbQuestion
             // 
+            tbQuestion.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             tbQuestion.Location = new Point(106, 26);
             tbQuestion.Name = "tbQuestion";
             tbQuestion.PlaceholderText = "Guten Abend";
@@ -93,9 +95,10 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(199, 227);
+            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSave.Location = new Point(199, 235);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(94, 29);
+            btnSave.Size = new Size(94, 30);
             btnSave.TabIndex = 9;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -103,9 +106,10 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(27, 227);
+            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCancel.Location = new Point(30, 235);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
+            btnCancel.Size = new Size(94, 30);
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
@@ -113,13 +117,14 @@
             // 
             // gbCardBack
             // 
+            gbCardBack.Anchor = AnchorStyles.Bottom;
             gbCardBack.Controls.Add(tbAnswerNote);
             gbCardBack.Controls.Add(lblAnswerNote);
             gbCardBack.Controls.Add(tbAnswer);
             gbCardBack.Controls.Add(lblAnswer);
             gbCardBack.Location = new Point(12, 117);
             gbCardBack.Name = "gbCardBack";
-            gbCardBack.Size = new Size(298, 104);
+            gbCardBack.Size = new Size(298, 112);
             gbCardBack.TabIndex = 10;
             gbCardBack.TabStop = false;
             gbCardBack.Text = "Card Back";
@@ -167,6 +172,7 @@
             Controls.Add(gbCardFront);
             Controls.Add(btnSave);
             Controls.Add(btnCancel);
+            MinimumSize = new Size(341, 315);
             Name = "CardEditForm";
             Text = "CardEditForm";
             Load += CardEditForm_Load;
