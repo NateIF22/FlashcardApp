@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             btnExit = new Button();
-            cardFrontControl = new CardFrontControl();
-            cardBackControl = new CardBackControl();
             btnFlip = new Button();
             btnCorrect = new Button();
             btnIncorrect = new Button();
+            cardBackControl = new CardBackControl();
+            cardFrontControl = new CardFrontControl();
             SuspendLayout();
             // 
             // btnExit
@@ -46,25 +46,9 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
-            // cardFrontControl
-            // 
-            cardFrontControl.BackColor = SystemColors.ControlDark;
-            cardFrontControl.Location = new Point(182, 35);
-            cardFrontControl.Name = "cardFrontControl";
-            cardFrontControl.Size = new Size(368, 440);
-            cardFrontControl.TabIndex = 2;
-            // 
-            // cardBackControl
-            // 
-            cardBackControl.BackColor = SystemColors.ControlDark;
-            cardBackControl.Location = new Point(182, 35);
-            cardBackControl.Name = "cardBackControl";
-            cardBackControl.Size = new Size(368, 440);
-            cardBackControl.TabIndex = 3;
-            // 
             // btnFlip
             // 
-            btnFlip.Location = new Point(292, 403);
+            btnFlip.Location = new Point(286, 393);
             btnFlip.Name = "btnFlip";
             btnFlip.Size = new Size(164, 58);
             btnFlip.TabIndex = 4;
@@ -94,16 +78,34 @@
             btnIncorrect.UseVisualStyleBackColor = false;
             btnIncorrect.Click += btnIncorrect_Click;
             // 
+            // cardBackControl
+            // 
+            cardBackControl.BackColor = SystemColors.Control;
+            cardBackControl.BorderStyle = BorderStyle.FixedSingle;
+            cardBackControl.Location = new Point(182, 12);
+            cardBackControl.Name = "cardBackControl";
+            cardBackControl.Size = new Size(368, 479);
+            cardBackControl.TabIndex = 2;
+            // 
+            // cardFrontControl
+            // 
+            cardFrontControl.BackColor = SystemColors.Control;
+            cardFrontControl.BorderStyle = BorderStyle.FixedSingle;
+            cardFrontControl.Location = new Point(182, 12);
+            cardFrontControl.Name = "cardFrontControl";
+            cardFrontControl.Size = new Size(368, 479);
+            cardFrontControl.TabIndex = 3;
+            // 
             // PracticeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(732, 503);
+            Controls.Add(cardFrontControl);
+            Controls.Add(cardBackControl);
             Controls.Add(btnIncorrect);
             Controls.Add(btnCorrect);
             Controls.Add(btnFlip);
-            Controls.Add(cardBackControl);
-            Controls.Add(cardFrontControl);
             Controls.Add(btnExit);
             Name = "PracticeForm";
             Text = "Practice";
@@ -113,10 +115,10 @@
         #endregion
 
         private Button btnExit;
-        private CardFrontControl cardFrontControl;
-        private CardBackControl cardBackControl;
         private Button btnFlip;
         private Button btnCorrect;
         private Button btnIncorrect;
+        private CardBackControl cardBackControl;
+        private CardFrontControl cardFrontControl;
     }
 }

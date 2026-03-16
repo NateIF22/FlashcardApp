@@ -25,13 +25,11 @@ namespace FinalFormApp
             InitializeComponent();
             cardBackControl.Visible = false;
             ButtonVisibility(false);
-
+            btnFlip.BringToFront();
             CardsInPractice = new List<Card>(DeckToPractice.Cards);
 
             if (CardsInPractice.Count > 0 ) 
             {
-            
-                // Casts the card, possibly change?
                 CurrentCard = CardsInPractice[0];
                 if (CurrentCard != null)
                 {
@@ -47,7 +45,7 @@ namespace FinalFormApp
 
         private void btnFlip_Click(object sender, EventArgs e)
         {
-            // TODO: Add logic to move to the next card in the list and update the card front and back controls with the new card details
+            // move to the next card in the list and update the card front and back controls with the new card details
             SwitchCardVisibility();
             if (cardBackControl.Visible) 
             {

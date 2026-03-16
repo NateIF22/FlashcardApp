@@ -39,7 +39,7 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(51, 14);
+            lblName.Location = new Point(19, 15);
             lblName.Name = "lblName";
             lblName.Size = new Size(98, 31);
             lblName.TabIndex = 0;
