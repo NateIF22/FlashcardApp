@@ -38,7 +38,7 @@ namespace FinalFormApp
 
         private void btnNewCard_Click(object sender, EventArgs e)
         {
-            // Adds a new card to the deck and updates the card count. Opens the card form for the new card and waits for it to close before reenabling the button(
+            // Adds a new card to the deck and opens the card edit form to edit the empty card
             Card newCard = new Card();
             CardEditForm cardEditForm = new CardEditForm(newCard, CurrentDeck);
             cardEditForm.ShowDialog();
@@ -48,7 +48,7 @@ namespace FinalFormApp
             {
                 btnEditCard.Enabled = false;
                 CurrentDeck.Cards.Add(newCard);
-                newCard.Id = CurrentDeck.Cards.IndexOf(newCard); // set the ID of the card to the index of the card in the list of cards
+                newCard.Id = CurrentDeck.Cards.IndexOf(newCard); // set the Id of the card to the index of the card in the list of cards
                 CurrentDeck.CardCount = CurrentDeck.Cards.Count;
                 lblCardCount.Text = CurrentDeck.CardCount.ToString();
                 
@@ -58,12 +58,14 @@ namespace FinalFormApp
 
         private void lvCards_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // if no card is selected, disable the edit card button and return
             if (lvCards.SelectedIndices.Count == 0)
             {
                 btnEditCard.Enabled = false;
                 return;
             }
-            // logic to enable the edit card button when a card is selected in the list vie
+
+            // enable the edit card button when a card is selected in the list view
             Card selectedCard = CurrentDeck.Cards[lvCards.SelectedIndices[0]];
             SelectedCard = selectedCard;
             btnEditCard.Enabled = true;
@@ -76,7 +78,7 @@ namespace FinalFormApp
             // Logic to update the list view with the cards in the deck.
             foreach (Card card in CurrentDeck.Cards)
             {
-                // goes therough the columns
+                // goes therough the columns and adds the card details to each column for each card in the deck
                 ListViewItem newItem = new ListViewItem(card.Id.ToString());
                 newItem.SubItems.Add(card.Question);
                 newItem.SubItems.Add(card.QuestionNote);
@@ -86,6 +88,7 @@ namespace FinalFormApp
             }
         }
 
+        // Opens the card edit form for the selected card when the edit card button is pressed
         private void btnEditCard_Click(object sender, EventArgs e)
         {
             if (SelectedCard != null)
@@ -99,9 +102,9 @@ namespace FinalFormApp
             }
         }
 
+        // Removes the current deck from the list of decks after confirmation
         private void btnRemoveDeck_Click(object sender, EventArgs e)
         {
-            // remove the deck from the list of decks in the main form. Closes the edit form after removing the deck
             var confirmResult = MessageBox.Show(
                 $"Are you sure you want to delete the deck: {CurrentDeck.Name}? This is permanent",
                 "Confirm Delete?",
@@ -114,19 +117,18 @@ namespace FinalFormApp
             }
         }
 
+        // Closes the form without saving changes
         private void btnExit_Click(object sender, EventArgs e)
         {
-            // Returns to the main menu and refreshes the list of decks in the main form
             this.Close();
         }
 
+        // Opens the deck edit form for the currently selected deck when the edit deck button is pressed
         private void btnEditDeck_Click(object sender, EventArgs e)
         {
-            // Logic to edit the deck details (name and category). Updates the labels on the form after editing the details
             DeckCreateForm deckCreateForm = new DeckCreateForm(CurrentDeck);
             if (deckCreateForm.ShowDialog() == DialogResult.OK)
             {
-                // Update the deck details and refresh the labels on the form
                 lblName.Text = CurrentDeck.Name;
                 lblType.Text = CurrentDeck.Category;
             }

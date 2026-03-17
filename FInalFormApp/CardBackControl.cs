@@ -10,12 +10,12 @@ namespace FinalFormApp
 {
     public partial class CardBackControl : UserControl
     {
-        // TODO: Add properties for the card answer and any additional details that should be displayed on the back of the card
         public CardBackControl()
         {
             InitializeComponent();
         }
 
+        // Populate the card details on the back of the card with card data
         public void PopulateCardDetails(Card card)
         {
             lblAnswer.Text = card.Answer;

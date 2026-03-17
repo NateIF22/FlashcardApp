@@ -22,7 +22,7 @@ namespace FInalFormApp
 
         }
 
-        // Event handler for when the current items in the BindingSource changes
+        // Event handler for when the current items in the Bindingsource changes
         private void DeckBindingSource_CurrentChanged(object? sender, ListChangedEventArgs e)
         {
             if (e.ListChangedType == ListChangedType.ItemAdded)
@@ -40,6 +40,7 @@ namespace FInalFormApp
             }
         }
 
+        // Adds a deck control to the list view for the inputed deck
         private void AddDeckControl(Deck deck)
         {
             var item = new DeckControl(deck, Decks);
@@ -49,29 +50,12 @@ namespace FInalFormApp
         private void btnNewDeck_Click(object sender, EventArgs e)
         {
             // Logic to add a new deck to the list box
-            // Add the DeckForm for creating a new deck
             DeckCreateForm deckForm = new DeckCreateForm(null);
             if (deckForm.ShowDialog() == DialogResult.OK)
             {
-                // ands a new deck to the list of decks
+                // adds a new deck to the list of decks
                 Decks.Add(deckForm.GetDeck());
             }
         }
-
-        //private void btnEditDeck_Click(object sender, EventArgs e)
-        //{
-        //    // When edit is clicked, open the card edit form
-        //    // Checks of the selected 
-        //    if (deckBindingSource.Current is Deck selectedDeck)
-        //    {
-        //        CardEditForm form = new CardEditForm(selectedDeck);
-        //        if (form.ShowDialog() == DialogResult.OK) 
-        //        {
-        //            //If the cards change, refresh the ui
-        //            UpdateDecks();
-        //        }
-        //    }
-
-        //}
     }
 }

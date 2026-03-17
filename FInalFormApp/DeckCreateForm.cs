@@ -14,6 +14,7 @@ namespace FinalFormApp
         private Deck Deck;
         public DeckCreateForm(Deck? deck)
         {
+            // Check if a deck is inputed, if not create a new deck. Use the inputed deck otherwise.
             if (deck == null)
             {
                 Deck = new Deck();
@@ -23,15 +24,15 @@ namespace FinalFormApp
                 Deck = deck;
             }
             InitializeComponent();
-            lblDeckName.Focus();
-
         }
 
+        // Returns the deck edited or created deck in the form.
         public Deck GetDeck()
         {
             return Deck;
         }
 
+        // Validates that the required fields are filled before closing the form and saving the deck
         private void lblSave_Click(object sender, EventArgs e)
         {
             if (Validators.IsPresent(tbDeckName.Text) == false)
@@ -48,17 +49,17 @@ namespace FinalFormApp
             }
             MessageBox.Show($"Deck: {Deck.Name} saved successfully!");
             this.DialogResult = DialogResult.OK;
-            // Needs to show the card edit form
             this.Close();
         }
 
         private void DeckForm_Load(object sender, EventArgs e)
         {
-            // Bind the text boxes to the deck properties
+            // bind the deck's properties to the form's textboxes
             tbDeckName.DataBindings.Add("Text", Deck, "Name");
             tbDeckType.DataBindings.Add("Text", Deck, "Category");
         }
 
+        // Close the form when the cancel button is clicked without saving any changes to the deck
         private void lblCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

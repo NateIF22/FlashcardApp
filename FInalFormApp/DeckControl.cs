@@ -27,17 +27,21 @@ namespace FinalFormApp
             lblCategory.DataBindings.Add("Text", DeckDetails, "Category");
         }
 
+        // Opens the practice form for the current deck when the button is pressed
         private void btnPractice_Click(object sender, EventArgs e)
         {
+            // Validate that there are cards in the deck before continuing
             if (DeckDetails.CardCount == 0)
             {
                 MessageBox.Show("Please add cards before practicing.", "No Cards", MessageBoxButtons.OK);
                 return;
             }
+            // Open the practice form for the current deck
             PracticeForm practiceForm = new PracticeForm(DeckDetails);
             practiceForm.ShowDialog();
         }
 
+        // Opens the current deck in the deck edit form when the button is pressed
         private void btnEdit_Click(object sender, EventArgs e)
         {
             var deckEditForm = new DeckEditForm(DeckDetails, Decks);

@@ -15,6 +15,7 @@ namespace FinalFormApp
             InitializeComponent();
         }
 
+        // Populate the card details on the front of the card with card data
         public void PopulateCardDetails(Card card)
         {
             lblQuestion.Text = card.Question;

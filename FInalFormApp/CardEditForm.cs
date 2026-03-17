@@ -17,13 +17,12 @@ namespace FinalFormApp
             InitializeComponent();
             _card = card;
             _deck = deck;
-            // create a new card
-            //use databinding to synch tb's with cards data
-            // add the card to the deck if saved
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            // Validate that the required fields are filled before closing the card form
             if (Validators.IsPresent(tbQuestion.Text) == false)
             {
                 MessageBox.Show("Question is required.");
@@ -36,6 +35,7 @@ namespace FinalFormApp
                 tbAnswer.Focus();
                 return;
             }
+
             MessageBox.Show($"Card sucessfuly saved to '{_deck.Name}'.");
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -43,7 +43,7 @@ namespace FinalFormApp
 
         private void CardEditForm_Load(object sender, EventArgs e)
         {
-            // Bind the created card's properties to the text boxes
+            // Bind the created card's properties to the form's textboxes
             tbQuestion.DataBindings.Add("Text", _card, "Question");
             tbQuestionNote.DataBindings.Add("Text", _card, "QuestionNote");
             tbAnswer.DataBindings.Add("Text", _card, "Answer");
