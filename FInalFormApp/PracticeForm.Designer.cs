@@ -52,7 +52,7 @@
             btnFlip.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnFlip.Location = new Point(286, 393);
             btnFlip.Name = "btnFlip";
-            btnFlip.Size = new Size(164, 58);
+            btnFlip.Size = new Size(172, 58);
             btnFlip.TabIndex = 4;
             btnFlip.Text = "Flip";
             btnFlip.UseVisualStyleBackColor = true;
@@ -63,8 +63,10 @@
             btnCorrect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCorrect.AutoSize = true;
             btnCorrect.BackColor = Color.LimeGreen;
+            btnCorrect.FlatStyle = FlatStyle.Flat;
             btnCorrect.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCorrect.Location = new Point(556, 369);
+            btnCorrect.ForeColor = SystemColors.ButtonHighlight;
+            btnCorrect.Location = new Point(564, 369);
             btnCorrect.Name = "btnCorrect";
             btnCorrect.Size = new Size(164, 58);
             btnCorrect.TabIndex = 5;
@@ -77,8 +79,10 @@
             btnIncorrect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnIncorrect.AutoSize = true;
             btnIncorrect.BackColor = Color.OrangeRed;
+            btnIncorrect.FlatStyle = FlatStyle.Flat;
             btnIncorrect.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnIncorrect.Location = new Point(556, 433);
+            btnIncorrect.ForeColor = SystemColors.ButtonHighlight;
+            btnIncorrect.Location = new Point(564, 433);
             btnIncorrect.Name = "btnIncorrect";
             btnIncorrect.Size = new Size(164, 58);
             btnIncorrect.TabIndex = 6;
@@ -93,7 +97,7 @@
             cardBackControl.BorderStyle = BorderStyle.FixedSingle;
             cardBackControl.Location = new Point(182, 12);
             cardBackControl.Name = "cardBackControl";
-            cardBackControl.Size = new Size(371, 479);
+            cardBackControl.Size = new Size(379, 479);
             cardBackControl.TabIndex = 2;
             // 
             // cardFrontControl
@@ -104,14 +108,14 @@
             cardFrontControl.Location = new Point(182, 12);
             cardFrontControl.MinimumSize = new Size(371, 0);
             cardFrontControl.Name = "cardFrontControl";
-            cardFrontControl.Size = new Size(371, 479);
+            cardFrontControl.Size = new Size(379, 479);
             cardFrontControl.TabIndex = 3;
             // 
             // PracticeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(732, 503);
+            ClientSize = new Size(740, 503);
             Controls.Add(cardFrontControl);
             Controls.Add(cardBackControl);
             Controls.Add(btnIncorrect);
