@@ -1,2 +1,2 @@
-# FInalFormApp
-A simple flashcard application for practacing learning words and concepts.
+# FlashcardApp
+A simple flashcard application for use practacing learning words and concepts.
