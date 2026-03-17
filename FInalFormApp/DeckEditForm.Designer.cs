@@ -1,4 +1,4 @@
-﻿namespace FinalFormApp
+﻿namespace FlashcardApp
 {
     partial class DeckEditForm
     {

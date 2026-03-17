@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FinalFormApp
+namespace FlashcardApp
 {
     internal class Validators
     {
