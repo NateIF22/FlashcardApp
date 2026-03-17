@@ -1,4 +1,4 @@
-﻿namespace FInalFormApp
+﻿namespace FlashcardApp
 {
     partial class Form1
     {

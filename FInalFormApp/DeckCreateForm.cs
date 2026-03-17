@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace FinalFormApp
+namespace FlashcardApp
 {
     public partial class DeckCreateForm : Form
     {

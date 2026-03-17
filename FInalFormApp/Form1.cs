@@ -1,8 +1,8 @@
-using FinalFormApp;
+using FlashcardApp;
 using System.ComponentModel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
-namespace FInalFormApp
+namespace FlashcardApp
 {
 
     public partial class Form1 : Form

@@ -1,4 +1,4 @@
-namespace FInalFormApp
+namespace FlashcardApp
 {
     internal static class Program
     {

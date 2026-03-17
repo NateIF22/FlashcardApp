@@ -1,4 +1,4 @@
-﻿using FInalFormApp;
+﻿using FlashcardApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FinalFormApp
+namespace FlashcardApp
 {
     public partial class DeckEditForm : Form
     {
