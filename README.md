@@ -1,2 +1,2 @@
 # FlashcardApp
-A simple flashcard application for use practacing learning words and concepts.
+A simple flashcard application for use learning words and concepts. Create decks of flashcards for specific categories and practice them.
