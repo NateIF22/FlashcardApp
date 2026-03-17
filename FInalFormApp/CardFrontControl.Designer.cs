@@ -1,4 +1,4 @@
-﻿namespace FlashcardApp
+﻿namespace FinalFormApp
 {
     partial class CardFrontControl
     {

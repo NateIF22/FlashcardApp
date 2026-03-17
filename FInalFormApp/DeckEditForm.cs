@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FlashcardApp
+namespace FinalFormApp
 {
     public partial class DeckEditForm : Form
     {

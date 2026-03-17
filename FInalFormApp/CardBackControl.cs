@@ -6,16 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FlashcardApp
+namespace FinalFormApp
 {
     public partial class CardBackControl : UserControl
     {
+        // TODO: Add properties for the card answer and any additional details that should be displayed on the back of the card
         public CardBackControl()
         {
             InitializeComponent();
         }
 
-        // Populates the card back control with the details from the given card
         public void PopulateCardDetails(Card card)
         {
             lblAnswer.Text = card.Answer;
